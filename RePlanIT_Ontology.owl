@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="http://www.semanticweb.org/RePlanIT/"
      xml:base="http://www.semanticweb.org/RePlanIT/"
-     xmlns:dc="http://purl.org/dc/dcmitype/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:dct="http://purl.org/dc/terms/"
      xmlns:dpv="http://www.w3.org/ns/dpv#"
      xmlns:lcc="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/"
@@ -19,14 +19,14 @@
      xmlns:schema="https://schema.org/"
      xmlns:sensor="https://mmisw.org/ont/univmemphis/sensor/"
      xmlns:matonto="http://matonto.org/ontologies/matonto#"
+     xmlns:dcmitype="http://purl.org/dc/dcmitype/"
      xmlns:owl-time="https://www.w3.org/TR/owl-time/#t"
-     xmlns:replanit="http://www.semanticweb.org/RePlanIT/"
      xmlns:smashHit="http://ontologies.atb-bremen.de/smashHitCore#"
      xmlns:ontosensor="http://mmisw.org/ont/univmemphis/sensor#"
      xmlns:devops-infra="http://w3id.org/devops-infra/server#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/RePlanIT/">
-        <dc:contributor>The RePlanIT project consortium.</dc:contributor>
-        <dc:contributor>This work is supported by the Circular Resource Planning for IT (RePlanIT) project, which is funded by a Topsector Energy subsidy from the Ministry of Economic Affairs and Climate Policy in the Netherlands.</dc:contributor>
+        <dcmitype:contributor>The RePlanIT project consortium.</dcmitype:contributor>
+        <dcmitype:contributor>This work is supported by the Circular Resource Planning for IT (RePlanIT) project, which is funded by a Topsector Energy subsidy from the Ministry of Economic Affairs and Climate Policy in the Netherlands.</dcmitype:contributor>
         <dct:abstract>The increasing digitisation and unprecedented amount of data that is generated on a daily basis has resulted in Information and Communications Technology (ICT) devices being disposed of before the end of their functional lifetime. The result is increased ICT hardware manufacturing, which is not sustainable due to the growing demand for critical materials needed and the greenhouse emissions associated with it. A solution is to transition towards a circular economy (CE), which encourages the reuse, recycling, remanufacturing, and repurposing of materials and products. However, the technological adoption of the CE in the ICT sector is currently limited due to the the lack of standardised and findable, accessible, interoperable, reusable (FAIR) ICT data sharing between manufacturers, sustainability experts and technology provides. This paper presents the initial efforts towards an ontology, which interrelates and synchronises data sharing in the materials, ICT and CE domains. The ontology&apos;s main application is for building dynamic digital product passports of ICT devices that support FAIR ICT data sharing and sustainable human and machine decision-making.</dct:abstract>
         <dct:creator>Anelia Kurteva</dct:creator>
         <dct:license>https://creativecommons.org/licenses/by/4.0/</dct:license>
@@ -44,6 +44,18 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcmitype/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/dcmitype/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcmitype/description"/>
     
 
 
@@ -661,7 +673,7 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/City">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/City"/>
-        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     </owl:DatatypeProperty>
     
 
@@ -860,7 +872,7 @@
 
     <owl:Class rdf:about="http://elite.polito.it/ontologies/dogont.owl#Computer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/ICTDevice"/>
-        <dct:description>A machine for performing calculations automatically, work and play.</dct:description>
+        <dc:description>A machine for performing calculations automatically, work and play.</dc:description>
         <rdfs:label>Computer</rdfs:label>
     </owl:Class>
     
@@ -870,7 +882,7 @@
 
     <owl:Class rdf:about="http://matonto.org/ontologies/matonto#Ceramics">
         <rdfs:subClassOf rdf:resource="http://matonto.org/ontologies/matonto#Material"/>
-        <dct:description>A ceramic is any of the various hard, brittle, heat-resistant and corrosion-resistant materials made by shaping and then firing an inorganic, nonmetallic material, such as clay, at a high temperature.</dct:description>
+        <dc:description>A ceramic is any of the various hard, brittle, heat-resistant and corrosion-resistant materials made by shaping and then firing an inorganic, nonmetallic material, such as clay, at a high temperature.</dc:description>
         <rdfs:label>Ceramics</rdfs:label>
     </owl:Class>
     
@@ -880,7 +892,7 @@
 
     <owl:Class rdf:about="http://matonto.org/ontologies/matonto#Composites">
         <rdfs:subClassOf rdf:resource="http://matonto.org/ontologies/matonto#Material"/>
-        <dct:description>A composite material is a material which is produced from two or more constituent materials.</dct:description>
+        <dc:description>A composite material is a material which is produced from two or more constituent materials.</dc:description>
         <rdfs:label>Composites</rdfs:label>
     </owl:Class>
     
@@ -890,7 +902,7 @@
 
     <owl:Class rdf:about="http://matonto.org/ontologies/matonto#Glasses">
         <rdfs:subClassOf rdf:resource="http://matonto.org/ontologies/matonto#Material"/>
-        <dct:description>Glass is a non-crystalline, often transparent, amorphous solid that has widespread practical, technological, and decorative use.</dct:description>
+        <dc:description>Glass is a non-crystalline, often transparent, amorphous solid that has widespread practical, technological, and decorative use.</dc:description>
         <rdfs:label>Glasses</rdfs:label>
     </owl:Class>
     
@@ -900,7 +912,7 @@
 
     <owl:Class rdf:about="http://matonto.org/ontologies/matonto#Material">
         <owl:disjointWith rdf:resource="https://schema.org/Brand"/>
-        <dct:description>A chemical substance that is studied in materials science.</dct:description>
+        <dc:description>A chemical substance that is studied in materials science.</dc:description>
         <rdfs:label>Material</rdfs:label>
     </owl:Class>
     
@@ -910,7 +922,7 @@
 
     <owl:Class rdf:about="http://matonto.org/ontologies/matonto#Metals">
         <rdfs:subClassOf rdf:resource="http://matonto.org/ontologies/matonto#Material"/>
-        <dct:description>Metals are elementary substances, such as gold, silver and copper. They are crystalline when solid and naturally occur in minerals. They are often good conductors of electricity and heat, shiny and malleable.</dct:description>
+        <dc:description>Metals are elementary substances, such as gold, silver and copper. They are crystalline when solid and naturally occur in minerals. They are often good conductors of electricity and heat, shiny and malleable.</dc:description>
         <rdfs:label>Metals</rdfs:label>
     </owl:Class>
     
@@ -920,6 +932,7 @@
 
     <owl:Class rdf:about="http://matonto.org/ontologies/matonto#Nanomaterials">
         <rdfs:subClassOf rdf:resource="http://matonto.org/ontologies/matonto#Material"/>
+        <dc:description>Nanomaterials can be defined as materials possessing, at minimum, one external dimension measuring 1-100nm.</dc:description>
         <rdfs:label>Nanomaterials</rdfs:label>
     </owl:Class>
     
@@ -929,6 +942,7 @@
 
     <owl:Class rdf:about="http://matonto.org/ontologies/matonto#Polymers">
         <rdfs:subClassOf rdf:resource="http://matonto.org/ontologies/matonto#Material"/>
+        <dc:description>A polymer is a substance or material consisting of very large molecules called macromolecules, composed of many repeating subunits.</dc:description>
         <rdfs:label>Polymers</rdfs:label>
     </owl:Class>
     
@@ -938,7 +952,7 @@
 
     <owl:Class rdf:about="http://mmisw.org/ont/univmemphis/sensor#Humidity">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <dct:description>A humidity sensor.</dct:description>
+        <dc:description>A humidity sensor.</dc:description>
         <rdfs:label>Humidity Sensor</rdfs:label>
     </owl:Class>
     
@@ -948,7 +962,7 @@
 
     <owl:Class rdf:about="http://ontologies.atb-bremen.de/smashHitCore#PhotoelectricSensor">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <dct:description>A photoelectric sensor uses a light beam to detect smoke.</dct:description>
+        <dc:description>A photoelectric sensor uses a light beam to detect smoke.</dc:description>
         <rdfs:label>Photoelectric Sensor</rdfs:label>
     </owl:Class>
     
@@ -958,7 +972,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C142235">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <dct:description>A sensor used to detect electrical current.</dct:description>
+        <dc:description>A sensor used to detect electrical current.</dc:description>
         <rdfs:label>Electrical Current Sensor</rdfs:label>
     </owl:Class>
     
@@ -968,7 +982,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C49839">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A device designed to produce an electric current through chemical reaction.</dct:description>
+        <dc:description>A device designed to produce an electric current through chemical reaction.</dc:description>
         <rdfs:label>Battery</rdfs:label>
     </owl:Class>
     
@@ -978,7 +992,7 @@
 
     <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCIT_C49858">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>An apparatus for taking photographs, generally consisting of a lightproof enclosure having an aperture with a shuttered lens through which the image of an object is focused and recorded on a photosensitive film or plate.</dct:description>
+        <dc:description>An apparatus for taking photographs, generally consisting of a lightproof enclosure having an aperture with a shuttered lens through which the image of an object is focused and recorded on a photosensitive film or plate.</dc:description>
         <rdfs:label>Camera</rdfs:label>
     </owl:Class>
     
@@ -987,7 +1001,7 @@
     <!-- http://purl.org/dc/dcmitype/Software -->
 
     <owl:Class rdf:about="http://purl.org/dc/dcmitype/Software">
-        <dct:description>A computer program in source or compiled form.</dct:description>
+        <dc:description>A computer program in source or compiled form.</dc:description>
         <rdfs:comment>Examples include a C source file, MS-Windows .exe executable, or Perl script.</rdfs:comment>
         <rdfs:label>Software</rdfs:label>
     </owl:Class>
@@ -998,7 +1012,7 @@
 
     <owl:Class rdf:about="http://w3id.org/devops-infra/server#PhysicalServer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/DataServer"/>
-        <dct:description>A physical server refers to a piece of hardware.</dct:description>
+        <dc:description>A physical server refers to a piece of hardware.</dc:description>
         <rdfs:label>Physical Server</rdfs:label>
     </owl:Class>
     
@@ -1008,7 +1022,7 @@
 
     <owl:Class rdf:about="http://w3id.org/devops-infra/server#VirtualServer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/DataServer"/>
-        <dct:description>A virtual server mimics the functionality of a physical dedicated server. Multiple virtual servers may be implemented on a single bare metal server, each with its own OS, independent provisioning, and software.</dct:description>
+        <dc:description>A virtual server mimics the functionality of a physical dedicated server. Multiple virtual servers may be implemented on a single bare metal server, each with its own OS, independent provisioning, and software.</dc:description>
         <rdfs:label>Virtual Server</rdfs:label>
     </owl:Class>
     
@@ -1017,7 +1031,7 @@
     <!-- http://www.semanticweb.org/RePlanIT/Activity -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Activity">
-        <dct:description>Activity running in or supported by software.</dct:description>
+        <dc:description>Activity running in or supported by software.</dc:description>
         <rdfs:label>Activity</rdfs:label>
     </owl:Class>
     
@@ -1027,7 +1041,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Alloy">
         <rdfs:subClassOf rdf:resource="http://matonto.org/ontologies/matonto#Metals"/>
-        <dct:description>A metal alloy is a substance that combines more than one metal or mixes a metal with other non-metallic elements.</dct:description>
+        <dc:description>A metal alloy is a substance that combines more than one metal or mixes a metal with other non-metallic elements.</dc:description>
         <rdfs:label>Alloy</rdfs:label>
     </owl:Class>
     
@@ -1037,7 +1051,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Aluminium">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description>Aluminium (aluminum in American and Canadian English) is a chemical element with the symbol Al and atomic number 13.  Aluminium visually resembles silver, both in its color and in its great ability to reflect light. It is soft, non-magnetic and ductile.</dct:description>
+        <dc:description>Aluminium (aluminum in American and Canadian English) is a chemical element with the symbol Al and atomic number 13.  Aluminium visually resembles silver, both in its color and in its great ability to reflect light. It is soft, non-magnetic and ductile.</dc:description>
         <rdfs:label>Aluminium</rdfs:label>
     </owl:Class>
     
@@ -1047,7 +1061,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/AntivirusSoftware">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/SecuritySoftware"/>
-        <dct:description>An antivirus is a software program used to prevent, detect, and eliminate malware and viruses.</dct:description>
+        <dc:description>An antivirus is a software program used to prevent, detect, and eliminate malware and viruses.</dc:description>
         <rdfs:label>Antivirus Software</rdfs:label>
     </owl:Class>
     
@@ -1066,7 +1080,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Audit">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Activity"/>
-        <dct:description>An official examination of the accounts of a business.</dct:description>
+        <dc:description>An official examination of the accounts of a business.</dc:description>
         <rdfs:label>Audit</rdfs:label>
     </owl:Class>
     
@@ -1076,7 +1090,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/AuthenticationSoftware">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/SecuritySoftware"/>
-        <dct:description>Authentication software is a means of authenticating users through a software application or mobile app, instead of a hardware device.</dct:description>
+        <dc:description>Authentication software is a means of authenticating users through a software application or mobile app, instead of a hardware device.</dc:description>
         <rdfs:label>Authentication Software</rdfs:label>
     </owl:Class>
     
@@ -1086,7 +1100,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/BasicInputOutputChip">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>The basic input/output system (BIOS) is the part of an operating system that links the specific hardware devices to the software.</dct:description>
+        <dc:description>The basic input/output system (BIOS) is the part of an operating system that links the specific hardware devices to the software.</dc:description>
         <rdfs:label>BIOS Chip</rdfs:label>
     </owl:Class>
     
@@ -1096,7 +1110,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Brass">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Alloy"/>
-        <dct:description>Brass is an alloy of copper and zinc, in proportions which can be varied to achieve different mechanical, electrical, and chemical properties. It is a substitutional alloy: atoms of the two constituents may replace each other within the same crystal structure.</dct:description>
+        <dc:description>Brass is an alloy of copper and zinc, in proportions which can be varied to achieve different mechanical, electrical, and chemical properties. It is a substitutional alloy: atoms of the two constituents may replace each other within the same crystal structure.</dc:description>
         <rdfs:label>Brass</rdfs:label>
     </owl:Class>
     
@@ -1106,7 +1120,7 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/CPU">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A Central Processing Unit or CPU is electronic machinery that carries out instructions from programs that allows a computer or other device to perform its tasks.</dct:description>
+        <dc:description>A Central Processing Unit or CPU is electronic machinery that carries out instructions from programs that allows a computer or other device to perform its tasks.</dc:description>
         <rdfs:label>CPU</rdfs:label>
     </owl:Class>
     
@@ -1116,8 +1130,8 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Cadmium">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description>Cadmium is a chemical element with the symbol Cd and atomic number 48.
-Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is similar in many respects to zinc but forms complex compounds.[5] Unlike most other metals, cadmium is resistant to corrosion and is used as a protective plate on other metals.</dct:description>
+        <dc:description>Cadmium is a chemical element with the symbol Cd and atomic number 48.
+Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is similar in many respects to zinc but forms complex compounds.[5] Unlike most other metals, cadmium is resistant to corrosion and is used as a protective plate on other metals.</dc:description>
         <rdfs:label>Cadmium</rdfs:label>
     </owl:Class>
     
@@ -1127,7 +1141,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Capacitor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A capacitor is a small piece of electrical hardware that can hold electrical energy within a circuit or field.</dct:description>
+        <dc:description>A capacitor is a small piece of electrical hardware that can hold electrical energy within a circuit or field.</dc:description>
         <rdfs:label>Capacitor</rdfs:label>
     </owl:Class>
     
@@ -1137,11 +1151,11 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/CarbonSteel">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Alloy"/>
-        <dct:description>Carbon steel is a steel with carbon content from about 0.05 up to 2.1 percent by weight. The definition of carbon steel from the American Iron and Steel Institute (AISI) states:
+        <dc:description>Carbon steel is a steel with carbon content from about 0.05 up to 2.1 percent by weight. The definition of carbon steel from the American Iron and Steel Institute (AISI) states:
 
 - no minimum content is specified or required for chromium, cobalt, molybdenum, nickel, niobium, titanium, tungsten, vanadium, zirconium, or any other element to be added to obtain a desired alloying effect;
 - the specified minimum for copper does not exceed 0.40%;
-- or the maximum content specified for any of the following elements does not exceed the percentages noted: manganese 1.65%; silicon 0.60%; copper 0.60%.</dct:description>
+- or the maximum content specified for any of the following elements does not exceed the percentages noted: manganese 1.65%; silicon 0.60%; copper 0.60%.</dc:description>
         <rdfs:label>Carbon Steel</rdfs:label>
     </owl:Class>
     
@@ -1150,7 +1164,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
     <!-- http://www.semanticweb.org/RePlanIT/Certification -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Certification">
-        <dct:description>Device or component certification.</dct:description>
+        <dc:description>Device or component certification.</dc:description>
         <rdfs:label>Certification</rdfs:label>
     </owl:Class>
     
@@ -1160,7 +1174,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Chassis">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A computer case, also known as a computer chassis, is the enclosure that contains most of the components of a personal computer.</dct:description>
+        <dc:description>A computer case, also known as a computer chassis, is the enclosure that contains most of the components of a personal computer.</dc:description>
         <rdfs:label>Chassis</rdfs:label>
     </owl:Class>
     
@@ -1170,7 +1184,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Chipset">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A chipset is a set of electronic components in one or more integrated circuits known as a &quot;Data Flow Management System&quot; that manages the data flow between the processor, memory and peripherals. It is usually found on the motherboard.</dct:description>
+        <dc:description>A chipset is a set of electronic components in one or more integrated circuits known as a &quot;Data Flow Management System&quot; that manages the data flow between the processor, memory and peripherals. It is usually found on the motherboard.</dc:description>
         <rdfs:label>Chipset</rdfs:label>
     </owl:Class>
     
@@ -1179,7 +1193,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
     <!-- http://www.semanticweb.org/RePlanIT/CircularStrategy -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/CircularStrategy">
-        <dct:description xml:lang="en">A range of efficiency and productivity enhancing activities carried out within the Circular Economy (CE).</dct:description>
+        <dc:description xml:lang="en">A range of efficiency and productivity enhancing activities carried out within the Circular Economy (CE).</dc:description>
         <rdfs:label xml:lang="en">Circular Strategy</rdfs:label>
     </owl:Class>
     
@@ -1197,7 +1211,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Client">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Role"/>
-        <dct:description xml:lang="en">An agent seeking a service for his/her device.</dct:description>
+        <dc:description xml:lang="en">An agent seeking a service for his/her device.</dc:description>
         <rdfs:label>Client</rdfs:label>
     </owl:Class>
     
@@ -1207,7 +1221,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Cobalt">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description>Magnesium is a chemical element with the symbol Mg and atomic number 12. Elemental magnesium is a gray-white lightweight metal, two-thirds the density of aluminium. Magnesium has the lowest melting (923 K (650 °C)) and the lowest boiling point 1,363 K (1,090 °C) of all the alkaline earth metals</dct:description>
+        <dc:description>Magnesium is a chemical element with the symbol Mg and atomic number 12. Elemental magnesium is a gray-white lightweight metal, two-thirds the density of aluminium. Magnesium has the lowest melting (923 K (650 °C)) and the lowest boiling point 1,363 K (1,090 °C) of all the alkaline earth metals</dc:description>
         <rdfs:label>Magnesium</rdfs:label>
     </owl:Class>
     
@@ -1217,7 +1231,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Complete">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Status"/>
-        <dct:description>A status has been completed.</dct:description>
+        <dc:description>A status has been completed.</dc:description>
         <rdfs:label>Complete</rdfs:label>
     </owl:Class>
     
@@ -1227,7 +1241,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/ComputerMouse">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/PointingDevice"/>
-        <dct:description>A small, movable device that lets an user control a range of things on a computer.</dct:description>
+        <dc:description>A small, movable device that lets an user control a range of things on a computer.</dc:description>
         <rdfs:label>Computer Mouse</rdfs:label>
     </owl:Class>
     
@@ -1237,7 +1251,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/CoolingPad">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/CoolingSystem"/>
-        <dct:description>A laptop/notebook cooler, cooling pad, cooler pad or chill mat is an accessory for laptop computers intended to reduce their operating temperature when the laptop is unable to sufficiently cool itself.</dct:description>
+        <dc:description>A laptop/notebook cooler, cooling pad, cooler pad or chill mat is an accessory for laptop computers intended to reduce their operating temperature when the laptop is unable to sufficiently cool itself.</dc:description>
         <rdfs:label>Cooling Pad</rdfs:label>
     </owl:Class>
     
@@ -1255,8 +1269,8 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/CoolingSystem">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
+        <dc:description>Cooling systems are passive or active systems that are designed to regulate and dissipate the heat generated by a computer so as to maintain optimal performance and protect the computer from damage that will occur from overheating.</dc:description>
         <rdfs:label>Cooling System</rdfs:label>
-        <rdfs:label>Cooling systems are passive or active systems that are designed to regulate and dissipate the heat generated by a computer so as to maintain optimal performance and protect the computer from damage that will occur from overheating.</rdfs:label>
     </owl:Class>
     
 
@@ -1265,7 +1279,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Copper">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description>Copper is a chemical element with the symbol Cu and atomic number 29. It is a soft, malleable, and ductile metal with very high thermal and electrical conductivity. Copper is used as a conductor of heat and electricity, as a building material, and as a constituent of various metal alloys, such as sterling silver used in jewelry, cupronickel used to make marine hardware and coins, and constantan used in strain gauges and thermocouples for temperature measurement.</dct:description>
+        <dc:description>Copper is a chemical element with the symbol Cu and atomic number 29. It is a soft, malleable, and ductile metal with very high thermal and electrical conductivity. Copper is used as a conductor of heat and electricity, as a building material, and as a constituent of various metal alloys, such as sterling silver used in jewelry, cupronickel used to make marine hardware and coins, and constantan used in strain gauges and thermocouples for temperature measurement.</dc:description>
         <rdfs:label>Copper</rdfs:label>
     </owl:Class>
     
@@ -1293,7 +1307,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/DataProvider">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Role"/>
-        <dct:description xml:lang="en">An agent providing data to another agent.</dct:description>
+        <dc:description xml:lang="en">An agent providing data to another agent.</dc:description>
         <rdfs:label xml:lang="en">Data Provider</rdfs:label>
     </owl:Class>
     
@@ -1303,7 +1317,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/DataServer">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/ICTDevice"/>
-        <dct:description>In computing, a data server is a piece of computer hardware or software (computer program) that provides functionality for other programs or devices, called &quot;clients&quot;.</dct:description>
+        <dc:description>In computing, a data server is a piece of computer hardware or software (computer program) that provides functionality for other programs or devices, called &quot;clients&quot;.</dc:description>
         <rdfs:comment>In this ontology we focus on the hardware of data servers.</rdfs:comment>
         <rdfs:label>Data Server</rdfs:label>
     </owl:Class>
@@ -1314,7 +1328,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/DataTransportRate">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/FunctionalIndicator"/>
-        <dct:description>A measure of data that is transferred from one location to another in a given amount of time.</dct:description>
+        <dc:description>A measure of data that is transferred from one location to another in a given amount of time.</dc:description>
         <rdfs:label>Data Transport Rate</rdfs:label>
     </owl:Class>
     
@@ -1324,7 +1338,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Decrypt">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
-        <dct:description>Decryption is a process that transforms encrypted information into its original format.</dct:description>
+        <dc:description>Decryption is a process that transforms encrypted information into its original format.</dc:description>
         <rdfs:label>Decrypt</rdfs:label>
     </owl:Class>
     
@@ -1334,7 +1348,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Delayed">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Status"/>
-        <dct:description>A process that has been delayed before or while running.</dct:description>
+        <dc:description>A process that has been delayed before or while running.</dc:description>
         <rdfs:label>Delayed</rdfs:label>
     </owl:Class>
     
@@ -1344,7 +1358,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/DeliveryTime">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/EconomicalIndicator"/>
-        <dct:description>The amount of time it takes for an ICT device or component to be delivered.</dct:description>
+        <dc:description>The amount of time it takes for an ICT device or component to be delivered.</dc:description>
         <rdfs:label>Delivery Time</rdfs:label>
     </owl:Class>
     
@@ -1363,7 +1377,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/DesktopComputer">
         <rdfs:subClassOf rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Computer"/>
-        <dct:description>A desktop computer is a personal computing device designed to fit on top of a typical office desk. It houses the physical hardware that makes a computer run and connects to input devices such as the monitor, keyboard and mouse users interact with.</dct:description>
+        <dc:description>A desktop computer is a personal computing device designed to fit on top of a typical office desk. It houses the physical hardware that makes a computer run and connects to input devices such as the monitor, keyboard and mouse users interact with.</dc:description>
         <rdfs:comment>Also reffered to as Personal Computer (PC).</rdfs:comment>
         <rdfs:label>Desktop Computer</rdfs:label>
     </owl:Class>
@@ -1374,7 +1388,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/DeviceOwner">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Role"/>
-        <dct:description xml:lang="en">The owner of a specific hardware device. A client might request device repair on the behalf of the device&apos;s owner.</dct:description>
+        <dc:description xml:lang="en">The owner of a specific hardware device. A client might request device repair on the behalf of the device&apos;s owner.</dc:description>
         <rdfs:label xml:lang="en">Device Owner</rdfs:label>
     </owl:Class>
     
@@ -1384,7 +1398,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/DeviceSpeed">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/FunctionalIndicator"/>
-        <dct:description>The speed with which HDs can copy information. Hard drive speeds are measured in megabytes per second or MBps.</dct:description>
+        <dc:description>The speed with which HDs can copy information. Hard drive speeds are measured in megabytes per second or MBps.</dc:description>
         <rdfs:label>Device Speed</rdfs:label>
     </owl:Class>
     
@@ -1393,7 +1407,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
     <!-- http://www.semanticweb.org/RePlanIT/DigitalProductPassport -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/DigitalProductPassport">
-        <dct:description>A collection of static and dynamic data associated with an ICT device that can be interpreted by machines and humans in order to support sustainable decision making.</dct:description>
+        <dc:description>A collection of static and dynamic data associated with an ICT device that can be interpreted by machines and humans in order to support sustainable decision making.</dc:description>
         <rdfs:label>Digital Product Passport</rdfs:label>
     </owl:Class>
     
@@ -1403,7 +1417,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Display">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A computer&apos;s display.</dct:description>
+        <dc:description>A computer&apos;s display.</dc:description>
         <rdfs:label>Display</rdfs:label>
     </owl:Class>
     
@@ -1413,6 +1427,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/EconomicalIndicator">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Indicator"/>
+        <dc:description>Economic indicators allow analysis of economic performance.</dc:description>
         <rdfs:label>Economical Indicator</rdfs:label>
     </owl:Class>
     
@@ -1422,7 +1437,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/ElectricalSwict">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Switch"/>
-        <dct:description>Electrical switches do not require physical or manual contact and can automatically perform a task.</dct:description>
+        <dc:description>Electrical switches do not require physical or manual contact and can automatically perform a task.</dc:description>
         <rdfs:label>Electrical Switch</rdfs:label>
     </owl:Class>
     
@@ -1432,7 +1447,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Encrypt">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
-        <dct:description>Data encryption is a security method where information is encoded and can only be accessed or decrypted by a user with the correct encryption key.</dct:description>
+        <dc:description>Data encryption is a security method where information is encoded and can only be accessed or decrypted by a user with the correct encryption key.</dc:description>
         <rdfs:label>Encrypt</rdfs:label>
     </owl:Class>
     
@@ -1450,7 +1465,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/EnvironmentalImpact">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/SustainabilityIndicator"/>
-        <dct:description>Life Cycle Assessment (LCA) results in midpoints (e.g. ozone depletion, land use) or endpoints (e.g health, eco-toxicity, resource use), or single endpoint (aggregate Pt)</dct:description>
+        <dc:description>Life Cycle Assessment (LCA) results in midpoints (e.g. ozone depletion, land use) or endpoints (e.g health, eco-toxicity, resource use), or single endpoint (aggregate Pt)</dc:description>
         <rdfs:label>Environmental Impact</rdfs:label>
     </owl:Class>
     
@@ -1460,7 +1475,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/External">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Peripheral"/>
-        <dct:description>ICT devices and components that go outside the computer case are external peripherals.</dct:description>
+        <dc:description>ICT devices and components that go outside the computer case are external peripherals.</dc:description>
         <rdfs:label>External</rdfs:label>
     </owl:Class>
     
@@ -1470,7 +1485,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Fan">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/CoolingSystem"/>
-        <dct:description>A computer fan is any fan inside, or attached to, a computer case used for active cooling. Fans are used to draw cooler air into the case from the outside, expel warm air from inside and move air across a heat sink to cool a particular component.</dct:description>
+        <dc:description>A computer fan is any fan inside, or attached to, a computer case used for active cooling. Fans are used to draw cooler air into the case from the outside, expel warm air from inside and move air across a heat sink to cool a particular component.</dc:description>
         <rdfs:label>Fan</rdfs:label>
     </owl:Class>
     
@@ -1480,7 +1495,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Ferrous">
         <rdfs:subClassOf rdf:resource="http://matonto.org/ontologies/matonto#Metals"/>
-        <dct:description>Ferrous metals are any metal that contains iron, such as stainless steel.</dct:description>
+        <dc:description>Ferrous metals are any metal that contains iron, such as stainless steel.</dc:description>
         <rdfs:label>Ferrous</rdfs:label>
     </owl:Class>
     
@@ -1490,7 +1505,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/FingerprintSensor">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <dct:description>A fingerprint sensor is an electronic device used to capture a digital image of the fingerprint pattern.</dct:description>
+        <dc:description>A fingerprint sensor is an electronic device used to capture a digital image of the fingerprint pattern.</dc:description>
         <rdfs:label>Fingerprint Sensor</rdfs:label>
     </owl:Class>
     
@@ -1500,7 +1515,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Fingerprinting">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/AuthenticationSoftware"/>
-        <dct:description>Fingerprinting is one form of biometrics, a science which uses people&apos;s physical or biological characteristics to identify them.</dct:description>
+        <dc:description>Fingerprinting is one form of biometrics, a science which uses people&apos;s physical or biological characteristics to identify them.</dc:description>
         <rdfs:label>Fingerprinting</rdfs:label>
     </owl:Class>
     
@@ -1510,7 +1525,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/FunctionalIndicator">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Indicator"/>
-        <dct:description>Indicators related to the functional characteristics of ICT devices.</dct:description>
+        <dc:description>Indicators related to the functional characteristics of ICT devices.</dc:description>
         <rdfs:label>Functional Indicator</rdfs:label>
     </owl:Class>
     
@@ -1520,7 +1535,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Gold">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description>Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. Gold is the most malleable of all metals and is a relatively rare material.</dct:description>
+        <dc:description>Gold is a chemical element with the symbol Au (from Latin: aurum) and atomic number 79. Gold is the most malleable of all metals and is a relatively rare material.</dc:description>
         <rdfs:label>Gold</rdfs:label>
     </owl:Class>
     
@@ -1530,7 +1545,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Gram">
         <rdfs:subClassOf rdf:resource="https://qudt.org/2.1/vocab/unit"/>
-        <dct:description>The gram (originally gramme; SI unit symbol g) is a unit of mass in the International System of Units (SI) equal to one one thousandth of a kilogram.</dct:description>
+        <dc:description>The gram (originally gramme; SI unit symbol g) is a unit of mass in the International System of Units (SI) equal to one one thousandth of a kilogram.</dc:description>
         <rdfs:label xml:lang="en">Gram</rdfs:label>
     </owl:Class>
     
@@ -1540,7 +1555,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/GraphicsCard">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A graphics card (also called a video card, display card, graphics adapter, VGA card/VGA, video adapter, display adapter, or mistakenly GPU) is an expansion card which generates a feed of output images to a display device, such as a computer monitor.</dct:description>
+        <dc:description>A graphics card (also called a video card, display card, graphics adapter, VGA card/VGA, video adapter, display adapter, or mistakenly GPU) is an expansion card which generates a feed of output images to a display device, such as a computer monitor.</dc:description>
         <rdfs:label>Graphics Card</rdfs:label>
     </owl:Class>
     
@@ -1550,7 +1565,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/GreenHouseGasDuringUseTime">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/GreenHouseGasEmissions"/>
-        <dct:description>The amount of greenhouse gasses (expressed in kgCO₂eq.) emitted while the product is in use.</dct:description>
+        <dc:description>The amount of greenhouse gasses (expressed in kgCO₂eq.) emitted while the product is in use.</dc:description>
         <rdfs:label>Green House Gas During Use Time</rdfs:label>
     </owl:Class>
     
@@ -1560,7 +1575,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/GreenHouseGasEmissions">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/SustainabilityIndicator"/>
-        <dct:description>The emission into the earth&apos;s atmosphere of any of various gases such as carbon dioxide (CO₂), that contribute to the greenhouse effect and climate change.</dct:description>
+        <dc:description>The emission into the earth&apos;s atmosphere of any of various gases such as carbon dioxide (CO₂), that contribute to the greenhouse effect and climate change.</dc:description>
         <rdfs:label xml:lang="en">Green House Gas Emissions</rdfs:label>
     </owl:Class>
     
@@ -1570,7 +1585,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/GreenHouseGassDuringProduction">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/GreenHouseGasEmissions"/>
-        <dct:description>The amount of greenhouse gasses (expressed in kgCO₂eq.) emitted during production.</dct:description>
+        <dc:description>The amount of greenhouse gasses (expressed in kgCO₂eq.) emitted during production.</dc:description>
         <rdfs:label>Green House Gass During Production</rdfs:label>
     </owl:Class>
     
@@ -1589,7 +1604,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/HardDrive">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/StorageDevice"/>
-        <dct:description>A hard drive is the hardware component that stores digital content.</dct:description>
+        <dc:description>A hard drive is the hardware component that stores digital content.</dc:description>
         <rdfs:label>Hard Drive</rdfs:label>
     </owl:Class>
     
@@ -1598,7 +1613,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
     <!-- http://www.semanticweb.org/RePlanIT/HardwareComponent -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/HardwareComponent">
-        <dct:description>Hardware components are the physical parts of ICT devices such as laptops, data servers, hard drives etc.</dct:description>
+        <dc:description>Hardware components are the physical parts of ICT devices such as laptops, data servers, hard drives etc.</dc:description>
         <rdfs:label>Hardware Component</rdfs:label>
     </owl:Class>
     
@@ -1608,7 +1623,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/HardwareTesting">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Testing"/>
-        <dct:description>Testing of hardware and its components. Usually performed by an IT specialist in a specialised facility.</dct:description>
+        <dc:description>Testing of hardware and its components. Usually performed by an IT specialist in a specialised facility.</dc:description>
         <rdfs:label>Hardware Testing</rdfs:label>
     </owl:Class>
     
@@ -1618,7 +1633,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/HeatSink">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/CoolingSystem"/>
-        <dct:description>A heat sink is a passive heat exchanger that transfers the heat generated by an electronic or a mechanical device to a fluid medium, often air or a liquid coolant, where it is dissipated away from the device, thereby allowing regulation of the device&apos;s temperature.</dct:description>
+        <dc:description>A heat sink is a passive heat exchanger that transfers the heat generated by an electronic or a mechanical device to a fluid medium, often air or a liquid coolant, where it is dissipated away from the device, thereby allowing regulation of the device&apos;s temperature.</dc:description>
         <rdfs:label>Heat Sink</rdfs:label>
     </owl:Class>
     
@@ -1636,7 +1651,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
     <!-- http://www.semanticweb.org/RePlanIT/ICTDevice -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/ICTDevice">
-        <dct:description>Internet and Communications (ICT) device is any laptop, tablet, telephone, smartphone, desktop computer, console, printer, speaker, camera or other electronic equipment that could be used for processing or storing information.</dct:description>
+        <dc:description>Internet and Communications (ICT) device is any laptop, tablet, telephone, smartphone, desktop computer, console, printer, speaker, camera or other electronic equipment that could be used for processing or storing information.</dc:description>
         <rdfs:label>ICT Device</rdfs:label>
     </owl:Class>
     
@@ -1646,7 +1661,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/InProgress">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Status"/>
-        <dct:description>A process in progress (not complete yet).</dct:description>
+        <dc:description>A process in progress (not complete yet).</dc:description>
         <rdfs:label>In Progress</rdfs:label>
     </owl:Class>
     
@@ -1655,7 +1670,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
     <!-- http://www.semanticweb.org/RePlanIT/Indicator -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Indicator">
-        <dct:description xml:lang="en">An indicator used to measure how circular a device is.</dct:description>
+        <dc:description xml:lang="en">An indicator used to measure how circular a device is.</dc:description>
         <rdfs:label xml:lang="en">Indicator</rdfs:label>
     </owl:Class>
     
@@ -1665,7 +1680,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Inductor">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>An inductor, or induction coil, stores electrical energy in a magnetic field.</dct:description>
+        <dc:description>An inductor, or induction coil, stores electrical energy in a magnetic field.</dc:description>
         <rdfs:label>Inductor</rdfs:label>
     </owl:Class>
     
@@ -1675,7 +1690,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/InputData">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Data"/>
-        <rdfs:label>Input Data</rdfs:label>
+        <dc:description>Input data for a process, activity, measurement etc.</dc:description>
     </owl:Class>
     
 
@@ -1684,7 +1699,7 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Internal">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Peripheral"/>
-        <dct:description>An internal device processes data or executes a program. The term &apos;internal&apos; describes a device installed inside the computer, unlike the external peripheral devices.</dct:description>
+        <dc:description>An internal device processes data or executes a program. The term &apos;internal&apos; describes a device installed inside the computer, unlike the external peripheral devices.</dc:description>
         <rdfs:label>Internal</rdfs:label>
     </owl:Class>
     
@@ -1694,8 +1709,8 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Iron">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Ferrous"/>
-        <dct:description>Iron is a chemical element with symbol Fe and atomic number 26.  Iron is the most widely used of all the metals, accounting for over 90% of worldwide metal production. 
-Its low cost and high strength often make it the material of choice material to withstand stress or transmit forces, such as the construction of machinery and machine tools, rails, automobiles, ship hulls, concrete reinforcing bars, and the load-carrying framework of buildings.</dct:description>
+        <dc:description>Iron is a chemical element with symbol Fe and atomic number 26.  Iron is the most widely used of all the metals, accounting for over 90% of worldwide metal production. 
+Its low cost and high strength often make it the material of choice material to withstand stress or transmit forces, such as the construction of machinery and machine tools, rails, automobiles, ship hulls, concrete reinforcing bars, and the load-carrying framework of buildings.</dc:description>
         <rdfs:label>Iron</rdfs:label>
     </owl:Class>
     
@@ -1705,7 +1720,7 @@ Its low cost and high strength often make it the material of choice material to 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Keyboard">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A computer&apos;s keyboard.</dct:description>
+        <dc:description>A computer&apos;s keyboard.</dc:description>
         <rdfs:label>Keyboard</rdfs:label>
     </owl:Class>
     
@@ -1715,7 +1730,7 @@ Its low cost and high strength often make it the material of choice material to 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Laptop">
         <rdfs:subClassOf rdf:resource="http://elite.polito.it/ontologies/dogont.owl#Computer"/>
-        <dct:description>A laptop or a laptop computer is a small portable computer.</dct:description>
+        <dc:description>A laptop or a laptop computer is a small portable computer.</dc:description>
         <rdfs:label>Laptop</rdfs:label>
     </owl:Class>
     
@@ -1725,7 +1740,7 @@ Its low cost and high strength often make it the material of choice material to 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Lead">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description>Lead is a chemical element with the symbol Pb (from the Latin plumbum) and atomic number 82. It is a heavy metal that is denser than most common materials. Lead is soft and malleable, and also has a relatively low melting point. The largest use of lead in the early 21st century is in lead–acid batteries.</dct:description>
+        <dc:description>Lead is a chemical element with the symbol Pb (from the Latin plumbum) and atomic number 82. It is a heavy metal that is denser than most common materials. Lead is soft and malleable, and also has a relatively low melting point. The largest use of lead in the early 21st century is in lead–acid batteries.</dc:description>
         <rdfs:label>Lead</rdfs:label>
     </owl:Class>
     
@@ -1735,7 +1750,7 @@ Its low cost and high strength often make it the material of choice material to 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Linux">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/OperatingSystem"/>
-        <dct:description>Linux is a Unix-like, open source and community-developed operating system (OS) for computers, servers, mainframes, mobile devices and embedded devices.</dct:description>
+        <dc:description>Linux is a Unix-like, open source and community-developed operating system (OS) for computers, servers, mainframes, mobile devices and embedded devices.</dc:description>
         <rdfs:label>Linux</rdfs:label>
     </owl:Class>
     
@@ -1745,9 +1760,9 @@ Its low cost and high strength often make it the material of choice material to 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Lithium">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description>Lithium is a chemical element with the symbol Li and atomic number 3. It is a soft, silvery-white alkali metal. Under standard conditions, it is the least dense metal and the least dense solid element. 
+        <dc:description>Lithium is a chemical element with the symbol Li and atomic number 3. It is a soft, silvery-white alkali metal. Under standard conditions, it is the least dense metal and the least dense solid element. 
 
-Lithium and its compounds have several industrial applications, including heat-resistant glass and ceramics, lithium grease lubricants, flux additives for iron, steel and aluminium production, lithium metal batteries, and lithium-ion batteries. These uses consume more than three-quarters of lithium production</dct:description>
+Lithium and its compounds have several industrial applications, including heat-resistant glass and ceramics, lithium grease lubricants, flux additives for iron, steel and aluminium production, lithium metal batteries, and lithium-ion batteries. These uses consume more than three-quarters of lithium production</dc:description>
         <rdfs:label>Lithium</rdfs:label>
     </owl:Class>
     
@@ -1766,7 +1781,7 @@ Lithium and its compounds have several industrial applications, including heat-r
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/MacOS">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/OperatingSystem"/>
-        <dct:description>macOS is a Unix operating system developed and marketed by Apple Inc.</dct:description>
+        <dc:description>macOS is a Unix operating system developed and marketed by Apple Inc.</dc:description>
         <rdfs:label>Mac OS</rdfs:label>
     </owl:Class>
     
@@ -1776,7 +1791,7 @@ Lithium and its compounds have several industrial applications, including heat-r
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Magnesium">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description>Magnesium is a chemical element with the symbol Mg and atomic number 12. It is a shiny gray metal having a low density, low melting point and high chemical reactivity. Like the other alkaline earth metals (group 2 of the periodic table) it occurs naturally only in combination with other elements .</dct:description>
+        <dc:description>Magnesium is a chemical element with the symbol Mg and atomic number 12. It is a shiny gray metal having a low density, low melting point and high chemical reactivity. Like the other alkaline earth metals (group 2 of the periodic table) it occurs naturally only in combination with other elements .</dc:description>
         <rdfs:label>Magnesium</rdfs:label>
     </owl:Class>
     
@@ -1786,7 +1801,7 @@ Lithium and its compounds have several industrial applications, including heat-r
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Maintenance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/CircularStrategy"/>
-        <dct:description xml:lang="en">The variety of support services provided for the optimization and/or repair of server, network and storage hardware.</dct:description>
+        <dc:description xml:lang="en">The variety of support services provided for the optimization and/or repair of server, network and storage hardware.</dc:description>
         <rdfs:label xml:lang="en">Maintenance</rdfs:label>
     </owl:Class>
     
@@ -1806,7 +1821,7 @@ Lithium and its compounds have several industrial applications, including heat-r
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/MaterialCircularity">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/SustainabilityIndicator"/>
-        <dct:description>Circular materials are fully recycled or renewable, and fully reused. Materials can be partially circular, which is expressed as the percentage material circularity.</dct:description>
+        <dc:description>Circular materials are fully recycled or renewable, and fully reused. Materials can be partially circular, which is expressed as the percentage material circularity.</dc:description>
         <rdfs:label>Material Circularity</rdfs:label>
     </owl:Class>
     
@@ -1816,7 +1831,7 @@ Lithium and its compounds have several industrial applications, including heat-r
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/MaterialCriticality">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/SustainabilityIndicator"/>
-        <dct:description>Identification of critical raw materials and their supply risk, vulnerability to supply restriction, and environmental implications. Possible to express as low-med-high in aggregate..</dct:description>
+        <dc:description>Identification of critical raw materials and their supply risk, vulnerability to supply restriction, and environmental implications. Possible to express as low-med-high in aggregate..</dc:description>
         <rdfs:label>Material Criticality</rdfs:label>
     </owl:Class>
     
@@ -1826,8 +1841,8 @@ Lithium and its compounds have several industrial applications, including heat-r
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/MechanicalSwict">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Switch"/>
+        <dc:description>Mechanical switches require physical or manual contact with switch for operation.</dc:description>
         <rdfs:label>Mechanical Switch</rdfs:label>
-        <rdfs:label>Mechanical switches require physical or manual contact with switch for operation.</rdfs:label>
     </owl:Class>
     
 
@@ -1845,7 +1860,7 @@ Lithium and its compounds have several industrial applications, including heat-r
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Memory">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/FunctionalIndicator"/>
-        <dct:description>The memory available for usage in an ICT device such as laptop.</dct:description>
+        <dc:description>The memory available for usage in an ICT device such as laptop.</dc:description>
         <rdfs:label>Memory</rdfs:label>
     </owl:Class>
     
@@ -1855,8 +1870,7 @@ Lithium and its compounds have several industrial applications, including heat-r
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Mercury">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description></dct:description>
-        <dct:description>Mercury is a chemical element with the symbol Hg and atomic number 80. It is also known as quicksilver and was formerly named hydrargyrum from the Greek words, hydor and argyros.</dct:description>
+        <dc:description>Mercury is a chemical element with the symbol Hg and atomic number 80. It is also known as quicksilver and was formerly named hydrargyrum from the Greek words, hydor and argyros.</dc:description>
         <rdfs:label>Mercury</rdfs:label>
     </owl:Class>
     
@@ -1866,7 +1880,7 @@ Lithium and its compounds have several industrial applications, including heat-r
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Microphone">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>An instrument capable of transforming sound waves into changes in electric currents or voltage, used in recording or transmitting sound.</dct:description>
+        <dc:description>An instrument capable of transforming sound waves into changes in electric currents or voltage, used in recording or transmitting sound.</dc:description>
         <rdfs:label>Microphone</rdfs:label>
     </owl:Class>
     
@@ -1885,7 +1899,7 @@ Lithium and its compounds have several industrial applications, including heat-r
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/MicrosoftWindows">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/OperatingSystem"/>
-        <dct:description>Microsoft Windows, also called Windows and Windows OS, computer operating system (OS) developed by Microsoft Corporation to run personal computers (PCs).</dct:description>
+        <dc:description>Microsoft Windows, also called Windows and Windows OS, computer operating system (OS) developed by Microsoft Corporation to run personal computers (PCs).</dc:description>
         <rdfs:label>Microsoft Windows</rdfs:label>
     </owl:Class>
     
@@ -1895,7 +1909,7 @@ Lithium and its compounds have several industrial applications, including heat-r
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/NetworkCard">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A network interface controller is a computer hardware component that connects a computer to a computer network. Early network interface controllers were commonly implemented on expansion cards that plugged into a computer bus.</dct:description>
+        <dc:description>A network interface controller is a computer hardware component that connects a computer to a computer network. Early network interface controllers were commonly implemented on expansion cards that plugged into a computer bus.</dc:description>
         <rdfs:label>Network Card</rdfs:label>
     </owl:Class>
     
@@ -1905,9 +1919,9 @@ Lithium and its compounds have several industrial applications, including heat-r
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Nickel">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description>Nickel is a chemical element with symbol Ni and atomic number 28. It is a silvery-white lustrous metal with a slight golden tinge. 
+        <dc:description>Nickel is a chemical element with symbol Ni and atomic number 28. It is a silvery-white lustrous metal with a slight golden tinge. 
 
-Nickel is used in many recognizable industrial and consumer products, including stainless steel, alnico magnets, coinage, rechargeable batteries (e.g. nickel-iron), electric guitar strings, microphone capsules, plating on plumbing fixtures,[86] and special alloys such as permalloy, elinvar, and invar.</dct:description>
+Nickel is used in many recognizable industrial and consumer products, including stainless steel, alnico magnets, coinage, rechargeable batteries (e.g. nickel-iron), electric guitar strings, microphone capsules, plating on plumbing fixtures,[86] and special alloys such as permalloy, elinvar, and invar.</dc:description>
         <rdfs:label>Nickel</rdfs:label>
     </owl:Class>
     
@@ -1917,7 +1931,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/NonFerrous">
         <rdfs:subClassOf rdf:resource="http://matonto.org/ontologies/matonto#Metals"/>
-        <dct:description>Non-ferrous metals do not contain iron.</dct:description>
+        <dc:description>Non-ferrous metals do not contain iron.</dc:description>
         <rdfs:label>Non-Ferrous</rdfs:label>
     </owl:Class>
     
@@ -1937,7 +1951,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Notebook">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Laptop"/>
-        <dct:description>A notebook is a personal computer that remains lightweight and small and typically weigh less than a laptop.</dct:description>
+        <dc:description>A notebook is a personal computer that remains lightweight and small and typically weigh less than a laptop.</dc:description>
         <rdfs:label>Notebook</rdfs:label>
     </owl:Class>
     
@@ -1947,7 +1961,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/OperatingSystem">
         <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Software"/>
-        <dct:description>An operating system (OS) is the program that, after being initially loaded into the computer by a boot program, manages all of the other application.</dct:description>
+        <dc:description>An operating system (OS) is the program that, after being initially loaded into the computer by a boot program, manages all of the other application.</dc:description>
         <rdfs:label>Operating System</rdfs:label>
     </owl:Class>
     
@@ -1957,6 +1971,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/OutputData">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Data"/>
+        <dc:description>Data that is an output of a process, activity, measurement etc.</dc:description>
         <rdfs:label>Output Data</rdfs:label>
     </owl:Class>
     
@@ -1966,7 +1981,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/PartsAvailability">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/EconomicalIndicator"/>
-        <dct:description>The availability status of parts for purchase.</dct:description>
+        <dc:description>The availability status of parts for purchase.</dc:description>
         <rdfs:label>Parts Availability</rdfs:label>
     </owl:Class>
     
@@ -1976,7 +1991,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Performance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/FunctionalIndicator"/>
-        <dct:description>Performance is a rating of how fast the ICT device performs its operations and if it encounters errors.</dct:description>
+        <dc:description>Performance is a rating of how fast the ICT device performs its operations and if it encounters errors.</dc:description>
         <rdfs:label>Performance</rdfs:label>
     </owl:Class>
     
@@ -1985,7 +2000,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
     <!-- http://www.semanticweb.org/RePlanIT/Peripheral -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Peripheral">
-        <dct:description>Peripheral devices can be external or internal.</dct:description>
+        <dc:description>Peripheral devices can be external or internal.</dc:description>
         <rdfs:label>Peripheral</rdfs:label>
     </owl:Class>
     
@@ -1995,7 +2010,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Plastic">
         <rdfs:subClassOf rdf:resource="http://matonto.org/ontologies/matonto#Polymers"/>
-        <dct:description>Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient.</dct:description>
+        <dc:description>Plastics are a wide range of synthetic or semi-synthetic materials that use polymers as a main ingredient.</dc:description>
         <rdfs:label>Plastic</rdfs:label>
     </owl:Class>
     
@@ -2005,7 +2020,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Platinum">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description>Platinum is a chemical element with the symbol Pt and atomic number 78. It is a dense, malleable, ductile, highly unreactive, precious, silverish-white transition metal. Platinum is one of the least reactive metals. It has remarkable resistance to corrosion, even at high temperatures, and is therefore considered a noble metal.</dct:description>
+        <dc:description>Platinum is a chemical element with the symbol Pt and atomic number 78. It is a dense, malleable, ductile, highly unreactive, precious, silverish-white transition metal. Platinum is one of the least reactive metals. It has remarkable resistance to corrosion, even at high temperatures, and is therefore considered a noble metal.</dc:description>
         <rdfs:label>Platinum</rdfs:label>
     </owl:Class>
     
@@ -2015,7 +2030,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/PointingDevice">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A pointing device is a human interface device that allows a user to input spatial (i.e., continuous and multi-dimensional) data to a computer.</dct:description>
+        <dc:description>A pointing device is a human interface device that allows a user to input spatial (i.e., continuous and multi-dimensional) data to a computer.</dc:description>
         <rdfs:label>Pointing Device</rdfs:label>
     </owl:Class>
     
@@ -2025,7 +2040,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Port">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A port is a number assigned to uniquely identify a connection endpoint and to direct data to a specific service.</dct:description>
+        <dc:description>A port is a number assigned to uniquely identify a connection endpoint and to direct data to a specific service.</dc:description>
         <rdfs:label>Port</rdfs:label>
     </owl:Class>
     
@@ -2035,7 +2050,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/PredictiveMaintenance">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Maintenance"/>
-        <dct:description xml:lang="en">Predictive maintenance techniques are designed to help determine the condition of in-service equipment in order to estimate when maintenance should be performed.</dct:description>
+        <dc:description xml:lang="en">Predictive maintenance techniques are designed to help determine the condition of in-service equipment in order to estimate when maintenance should be performed.</dc:description>
         <rdfs:label xml:lang="en">Predictive Maintenance</rdfs:label>
     </owl:Class>
     
@@ -2045,7 +2060,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/PrimaryResource">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/SustainabilityIndicator"/>
-        <dct:description>The amount of resources (expressed in kg) used in the product.</dct:description>
+        <dc:description>The amount of resources (expressed in kg) used in the product.</dc:description>
         <rdfs:label>Primary Resource</rdfs:label>
     </owl:Class>
     
@@ -2055,7 +2070,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Procurement">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Activity"/>
-        <dct:description>Procurement is the method of discovering and agreeing to terms and purchasing goods, services, or other works from an external source, often with the use of a tendering or competitive bidding process.</dct:description>
+        <dc:description>Procurement is the method of discovering and agreeing to terms and purchasing goods, services, or other works from an external source, often with the use of a tendering or competitive bidding process.</dc:description>
         <rdfs:label>Procurement</rdfs:label>
     </owl:Class>
     
@@ -2065,7 +2080,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Procurer">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Role"/>
-        <dct:description xml:lang="en">An agent that has the task to procurer service or devices.</dct:description>
+        <dc:description xml:lang="en">An agent that has the task to procurer service or devices.</dc:description>
         <rdfs:label xml:lang="en">Procurer</rdfs:label>
     </owl:Class>
     
@@ -2075,7 +2090,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/ProductCircularity">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/SustainabilityIndicator"/>
-        <dct:description>Percentage of circular material flow in the total products in use flow. Which is equal to the weighted average of the material circularity of all parts.</dct:description>
+        <dc:description>Percentage of circular material flow in the total products in use flow. Which is equal to the weighted average of the material circularity of all parts.</dc:description>
         <rdfs:label>Product Circularity</rdfs:label>
     </owl:Class>
     
@@ -2085,7 +2100,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/PurchaseCost">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/EconomicalIndicator"/>
-        <dct:description>The total cost for the item(s) or service purchased including taxes, shipping costs and other fees.</dct:description>
+        <dc:description>The total cost for the item(s) or service purchased including taxes, shipping costs and other fees.</dc:description>
         <rdfs:label xml:lang="en">Purchase Cost</rdfs:label>
     </owl:Class>
     
@@ -2095,7 +2110,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/RailKit">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>Rail kits are used to mount servers and other necessary IT equipment.</dct:description>
+        <dc:description>Rail kits are used to mount servers and other necessary IT equipment.</dc:description>
         <rdfs:label>Rail Kit</rdfs:label>
     </owl:Class>
     
@@ -2105,7 +2120,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Recommendation">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Activity"/>
-        <dct:description>A recommendation made by software to an end user.</dct:description>
+        <dc:description>A recommendation made by software to an end user.</dc:description>
         <rdfs:label>Recommendation</rdfs:label>
     </owl:Class>
     
@@ -2115,7 +2130,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Recovery">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/CircularStrategy"/>
-        <dct:description xml:lang="en">Any operation with the primary aim of reversing obsolescence.</dct:description>
+        <dc:description xml:lang="en">Any operation with the primary aim of reversing obsolescence.</dc:description>
         <rdfs:label xml:lang="en">Recovery</rdfs:label>
     </owl:Class>
     
@@ -2125,7 +2140,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Recycler">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Role"/>
-        <dct:description xml:lang="en">The agent responsible for the recycling of a device.</dct:description>
+        <dc:description xml:lang="en">The agent responsible for the recycling of a device.</dc:description>
         <rdfs:label xml:lang="en">Recycler</rdfs:label>
     </owl:Class>
     
@@ -2135,8 +2150,8 @@ Nickel is used in many recognizable industrial and consumer products, including 
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Recycling">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/CircularStrategy"/>
-        <dct:description xml:lang="en">The recovery of materials from particular classes of products. For circular use recycling must be postponed as long as possible, as recycling of materials implies loss of function and value. Nevertheless, recycling is the last option when products or parts can no longer be kept in a functional
-condition.</dct:description>
+        <dc:description xml:lang="en">The recovery of materials from particular classes of products. For circular use recycling must be postponed as long as possible, as recycling of materials implies loss of function and value. Nevertheless, recycling is the last option when products or parts can no longer be kept in a functional
+condition.</dc:description>
         <rdfs:label xml:lang="en">Recycling</rdfs:label>
     </owl:Class>
     
@@ -2146,7 +2161,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Refurbisher">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Role"/>
-        <dct:description xml:lang="en">The agent responsible for the refurbishment of a device.</dct:description>
+        <dc:description xml:lang="en">The agent responsible for the refurbishment of a device.</dc:description>
         <rdfs:label xml:lang="en">Refurbisher</rdfs:label>
     </owl:Class>
     
@@ -2156,7 +2171,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Refurbishment">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/CircularStrategy"/>
-        <dct:description xml:lang="en">Te process of returning a used product to a satisfactory working condition that may be inferior to the original specification.</dct:description>
+        <dc:description xml:lang="en">Te process of returning a used product to a satisfactory working condition that may be inferior to the original specification.</dc:description>
         <rdfs:label xml:lang="en">Refurbishment</rdfs:label>
     </owl:Class>
     
@@ -2166,7 +2181,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Remanufacturer">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Role"/>
-        <dct:description xml:lang="en">The agent responsible for remanufacturing a device.</dct:description>
+        <dc:description xml:lang="en">The agent responsible for remanufacturing a device.</dc:description>
         <rdfs:label xml:lang="en">Remanufacturer</rdfs:label>
     </owl:Class>
     
@@ -2176,7 +2191,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Remanufacturing">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/CircularStrategy"/>
-        <dct:description xml:lang="en">Returning a used product to at least its original performance with a warranty that is equivalent or better than that of the newly manufactured product.</dct:description>
+        <dc:description xml:lang="en">Returning a used product to at least its original performance with a warranty that is equivalent or better than that of the newly manufactured product.</dc:description>
         <rdfs:label xml:lang="en">Remanufacturing</rdfs:label>
     </owl:Class>
     
@@ -2196,7 +2211,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Repair">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/CircularStrategy"/>
-        <dct:description xml:lang="en">To restore (something damaged, faulty, or worn) to a good condition.</dct:description>
+        <dc:description xml:lang="en">To restore (something damaged, faulty, or worn) to a good condition.</dc:description>
         <rdfs:label xml:lang="en">Repair</rdfs:label>
     </owl:Class>
     
@@ -2206,7 +2221,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Repairer">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Role"/>
-        <dct:description xml:lang="en">The agent responsible for the repairment of a device.</dct:description>
+        <dc:description xml:lang="en">The agent responsible for the repairment of a device.</dc:description>
         <rdfs:label xml:lang="en">Repairer</rdfs:label>
     </owl:Class>
     
@@ -2216,7 +2231,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Reuse">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/CircularStrategy"/>
-        <dct:description>Reuse is the action or practice of using an item, whether for its original purpose (conventional reuse) or to fulfill a different function.</dct:description>
+        <dc:description>Reuse is the action or practice of using an item, whether for its original purpose (conventional reuse) or to fulfill a different function.</dc:description>
         <rdfs:label>Reuse</rdfs:label>
     </owl:Class>
     
@@ -2226,7 +2241,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/SecuritySoftware">
         <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Software"/>
-        <dct:description>Computer security software or cybersecurity software is any computer program designed to influence information security.</dct:description>
+        <dc:description>Computer security software or cybersecurity software is any computer program designed to influence information security.</dc:description>
         <rdfs:label>Security Software</rdfs:label>
     </owl:Class>
     
@@ -2236,7 +2251,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Silver">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description>Silver is a chemical element with the symbol Ag and atomic number 47. A soft, white, lustrous transition metal, it exhibits the highest electrical conductivity, thermal conductivity, and reflectivity of any metal.</dct:description>
+        <dc:description>Silver is a chemical element with the symbol Ag and atomic number 47. A soft, white, lustrous transition metal, it exhibits the highest electrical conductivity, thermal conductivity, and reflectivity of any metal.</dc:description>
         <rdfs:label>Silver</rdfs:label>
     </owl:Class>
     
@@ -2246,7 +2261,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Slot">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>Aslot, or expansion slot, is an engineered technique for adding capability to a computer in the form of connection pinholes (typically, in the range of 16 to 64 closely-spaced holes) and a place to fit an expansion card containing the circuitry that provides some specialized capability, such as video</dct:description>
+        <dc:description>Aslot, or expansion slot, is an engineered technique for adding capability to a computer in the form of connection pinholes (typically, in the range of 16 to 64 closely-spaced holes) and a place to fit an expansion card containing the circuitry that provides some specialized capability, such as video</dc:description>
         <rdfs:label>Slot</rdfs:label>
     </owl:Class>
     
@@ -2256,7 +2271,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/SoftwareSupport">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/FunctionalIndicator"/>
-        <dct:description>Software support is a service provided by a software publisher that delivers technical product help and advice to registered users.</dct:description>
+        <dc:description>Software support is a service provided by a software publisher that delivers technical product help and advice to registered users.</dc:description>
         <rdfs:label>Software Support</rdfs:label>
     </owl:Class>
     
@@ -2266,7 +2281,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/SoftwareTesting">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Testing"/>
-        <dct:description>Testing the software of a device.</dct:description>
+        <dc:description>Testing the software of a device.</dc:description>
         <rdfs:label>Software Testing</rdfs:label>
     </owl:Class>
     
@@ -2276,7 +2291,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/SolidStateDrive">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/StorageDevice"/>
-        <dct:description>An SSD, or solid-state drive, is a type of storage device used in computers. This non-volatile storage media stores persistent data on solid-state flash memory. SSDs replace traditional hard disk drives (HDDs) in computers and perform the same basic functions as a hard drive.</dct:description>
+        <dc:description>An SSD, or solid-state drive, is a type of storage device used in computers. This non-volatile storage media stores persistent data on solid-state flash memory. SSDs replace traditional hard disk drives (HDDs) in computers and perform the same basic functions as a hard drive.</dc:description>
         <rdfs:label>Solid State Drive</rdfs:label>
     </owl:Class>
     
@@ -2286,7 +2301,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Speakers">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A computer speaker is a hardware device that generates sound. It can be both and external and an integrated device within computers.</dct:description>
+        <dc:description>A computer speaker is a hardware device that generates sound. It can be both and external and an integrated device within computers.</dc:description>
         <rdfs:label>Speakers</rdfs:label>
     </owl:Class>
     
@@ -2295,7 +2310,7 @@ condition.</dct:description>
     <!-- http://www.semanticweb.org/RePlanIT/Status -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Status">
-        <dct:description>Represents the status of a process.</dct:description>
+        <dc:description>Represents the status of a process.</dc:description>
         <rdfs:label>Status</rdfs:label>
     </owl:Class>
     
@@ -2305,7 +2320,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/StorageDevice">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A storage device is any type of computing hardware that is used for storing, porting or extracting data files and objects.</dct:description>
+        <dc:description>A storage device is any type of computing hardware that is used for storing, porting or extracting data files and objects.</dc:description>
         <rdfs:label>Storage Device</rdfs:label>
     </owl:Class>
     
@@ -2315,7 +2330,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Subnotebook">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Laptop"/>
-        <dct:description>A portable microcomputer similar to but smaller and lighter than a notebook computer.</dct:description>
+        <dc:description>A portable microcomputer similar to but smaller and lighter than a notebook computer.</dc:description>
         <rdfs:label>Subnotebook</rdfs:label>
     </owl:Class>
     
@@ -2325,7 +2340,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Suspended">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Status"/>
-        <dct:description>A process that has been suspended.</dct:description>
+        <dc:description>A process that has been suspended.</dc:description>
         <rdfs:label>Suspended</rdfs:label>
     </owl:Class>
     
@@ -2335,7 +2350,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/SustainabilityIndicator">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Indicator"/>
-        <dct:description>Indicators used to assess how sustainable an ICT device is.</dct:description>
+        <dc:description>Indicators used to assess how sustainable an ICT device is.</dc:description>
         <rdfs:label>Sustainability Indicator</rdfs:label>
     </owl:Class>
     
@@ -2345,7 +2360,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Switch">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/ICTDevice"/>
-        <dct:description>A network switch connects devices in a network to each other, enabling them to talk by exchanging data packets.</dct:description>
+        <dc:description>A network switch connects devices in a network to each other, enabling them to talk by exchanging data packets.</dc:description>
         <rdfs:label>Switch</rdfs:label>
     </owl:Class>
     
@@ -2365,7 +2380,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Testing">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Activity"/>
-        <dct:description>Hardware and/of software testing of a system.</dct:description>
+        <dc:description>Hardware and/of software testing of a system.</dc:description>
         <rdfs:label>Testing</rdfs:label>
     </owl:Class>
     
@@ -2375,7 +2390,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Tin">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/NonFerrous"/>
-        <dct:description>Tin is a chemical element with the symbol Sn (from Latin: stannum) and atomic number 50. Tin is a soft, malleable, ductile and highly crystalline silvery-white metal. Tin has long been used in alloys with lead as solder.</dct:description>
+        <dc:description>Tin is a chemical element with the symbol Sn (from Latin: stannum) and atomic number 50. Tin is a soft, malleable, ductile and highly crystalline silvery-white metal. Tin has long been used in alloys with lead as solder.</dc:description>
         <rdfs:label>Tin</rdfs:label>
     </owl:Class>
     
@@ -2394,7 +2409,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Trackpad">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/PointingDevice"/>
-        <dct:description>A touchpad is used to control the mouse pointer, also known as the cursor on a laptop.</dct:description>
+        <dc:description>A touchpad is used to control the mouse pointer, also known as the cursor on a laptop.</dc:description>
         <rdfs:label>Trackpad</rdfs:label>
         <rdfs:seeAlso>Trackpad</rdfs:seeAlso>
     </owl:Class>
@@ -2405,7 +2420,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Ultrabook">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Laptop"/>
-        <dct:description>The term &apos;ultrabook&apos; has been introduced by Intel. A notebook can be considered an ultrabook if it&apos;s no more than 1.5cm thick, has an Intel processor, and an SSD.</dct:description>
+        <dc:description>The term &apos;ultrabook&apos; has been introduced by Intel. A notebook can be considered an ultrabook if it&apos;s no more than 1.5cm thick, has an Intel processor, and an SSD.</dc:description>
         <rdfs:label>Ultrabook</rdfs:label>
     </owl:Class>
     
@@ -2415,7 +2430,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/VaporChamber">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/CoolingSystem"/>
-        <dct:description>A vapor chamber is a planar heat pipe, which can spread heat in two dimensions.</dct:description>
+        <dc:description>A vapor chamber is a planar heat pipe, which can spread heat in two dimensions.</dc:description>
         <rdfs:label>Vapor Chamber</rdfs:label>
     </owl:Class>
     
@@ -2425,7 +2440,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/VideoCard">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A Video Card is a specialist piece of Hardware that accelerates video-related processes.</dct:description>
+        <dc:description>A Video Card is a specialist piece of Hardware that accelerates video-related processes.</dc:description>
         <rdfs:label>Video Card</rdfs:label>
     </owl:Class>
     
@@ -2435,7 +2450,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Warranty">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/EconomicalIndicator"/>
-        <dct:description>A written guarantee, issued to the purchaser of an article by its manufacturer, promising to repair or replace it if necessary within a specified period of time.</dct:description>
+        <dc:description>A written guarantee, issued to the purchaser of an article by its manufacturer, promising to repair or replace it if necessary within a specified period of time.</dc:description>
         <rdfs:label>Warranty</rdfs:label>
     </owl:Class>
     
@@ -2454,7 +2469,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/WirelessCard">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
-        <dct:description>A wireless card or wireless network card is a wireless terminal device used to enable internet connection through the wireless connection network under the coverage of a wireless local area network. Therefore, a wireless card installed on an industrial computer is used to enable wireless connectivity to the internet.</dct:description>
+        <dc:description>A wireless card or wireless network card is a wireless terminal device used to enable internet connection through the wireless connection network under the coverage of a wireless local area network. Therefore, a wireless card installed on an industrial computer is used to enable wireless connectivity to the internet.</dc:description>
         <rdfs:label>Wireless Card</rdfs:label>
     </owl:Class>
     
@@ -2464,7 +2479,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/2006/time#Instant">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
-        <dct:description>A temporal entity with zero extent or duration</dct:description>
+        <dc:description>A temporal entity with zero extent or duration</dc:description>
         <rdfs:label>Instant</rdfs:label>
     </owl:Class>
     
@@ -2474,7 +2489,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/2006/time#Interval">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
-        <dct:description>A temporal entity with an extent or duration.</dct:description>
+        <dc:description>A temporal entity with an extent or duration.</dc:description>
         <rdfs:label>Interval</rdfs:label>
     </owl:Class>
     
@@ -2483,7 +2498,7 @@ condition.</dct:description>
     <!-- http://www.w3.org/2006/time#TemporalEntity -->
 
     <owl:Class rdf:about="http://www.w3.org/2006/time#TemporalEntity">
-        <dct:description>A temporal interval or instant.</dct:description>
+        <dc:description>A temporal interval or instant.</dc:description>
         <rdfs:label>Temporal Entity</rdfs:label>
     </owl:Class>
     
@@ -2492,7 +2507,7 @@ condition.</dct:description>
     <!-- http://www.w3.org/ns/dcat#Role -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/dcat#Role">
-        <dct:description xml:lang="en">A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships.</dct:description>
+        <dc:description xml:lang="en">A role is the function of a resource or agent with respect to another resource, in the context of resource attribution or resource relationships.</dc:description>
         <rdfs:label xml:lang="en">Role</rdfs:label>
     </owl:Class>
     
@@ -2502,7 +2517,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/dpv#Acquire">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Obtain"/>
-        <dct:description>To come into possession or control of the data</dct:description>
+        <dc:description>To come into possession or control of the data</dc:description>
         <rdfs:label>Acquire</rdfs:label>
     </owl:Class>
     
@@ -2512,7 +2527,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/dpv#Analyse">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Use"/>
-        <dct:description>To study or examine the data in detail</dct:description>
+        <dc:description>To study or examine the data in detail</dc:description>
         <rdfs:label>Analyse</rdfs:label>
     </owl:Class>
     
@@ -2522,7 +2537,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/dpv#Collect">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Obtain"/>
-        <dct:description>To gather data from someone.</dct:description>
+        <dc:description>To gather data from someone.</dc:description>
         <rdfs:label>Collect</rdfs:label>
     </owl:Class>
     
@@ -2532,7 +2547,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/dpv#Derive">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Transform"/>
-        <dct:description>To create new derivative data from the original data.</dct:description>
+        <dc:description>To create new derivative data from the original data.</dc:description>
         <rdfs:label>Derive</rdfs:label>
     </owl:Class>
     
@@ -2542,7 +2557,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/dpv#Destruct">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/DataProcessing"/>
-        <dct:description>To process data in a way it no longer exists or cannot be repaired</dct:description>
+        <dc:description>To process data in a way it no longer exists or cannot be repaired</dc:description>
         <rdfs:label>Destruct</rdfs:label>
     </owl:Class>
     
@@ -2552,7 +2567,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/dpv#Obtain">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/DataProcessing"/>
-        <dct:description>To solicit or gather data from someone for a purpose.</dct:description>
+        <dc:description>To solicit or gather data from someone for a purpose.</dc:description>
         <rdfs:label>Obtain</rdfs:label>
     </owl:Class>
     
@@ -2562,7 +2577,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/dpv#Retrieve">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dpv#Use"/>
-        <dct:description>To retrieve data, often in an automated manner</dct:description>
+        <dc:description>To retrieve data, often in an automated manner</dc:description>
         <rdfs:label>Retrieve</rdfs:label>
     </owl:Class>
     
@@ -2572,7 +2587,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/dpv#Store">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/DataProcessing"/>
-        <dct:description>To keep data for future use.</dct:description>
+        <dc:description>To keep data for future use.</dc:description>
         <rdfs:label>Store</rdfs:label>
     </owl:Class>
     
@@ -2582,7 +2597,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/dpv#Transform">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/DataProcessing"/>
-        <dct:description>To change the form or nature of data.</dct:description>
+        <dc:description>To change the form or nature of data.</dc:description>
         <rdfs:label>Transform</rdfs:label>
     </owl:Class>
     
@@ -2592,7 +2607,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/dpv#Use">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/DataProcessing"/>
-        <dct:description>Use of data.</dct:description>
+        <dc:description>Use of data.</dc:description>
         <rdfs:label>Use</rdfs:label>
     </owl:Class>
     
@@ -2601,7 +2616,7 @@ condition.</dct:description>
     <!-- http://www.w3.org/ns/prov#Agent -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent">
-        <dct:description>An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&apos;s activity.</dct:description>
+        <dc:description>An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&apos;s activity.</dc:description>
         <rdfs:label>Agent</rdfs:label>
     </owl:Class>
     
@@ -2621,7 +2636,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Person">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-        <dct:description xml:lang="en">Person agents are people.</dct:description>
+        <dc:description xml:lang="en">Person agents are people.</dc:description>
         <rdfs:label xml:lang="en">Person</rdfs:label>
     </owl:Class>
     
@@ -2631,7 +2646,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#SoftwareAgent">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-        <dct:description xml:lang="en">A software agent is a running software.</dct:description>
+        <dc:description xml:lang="en">A software agent is a running software.</dc:description>
         <rdfs:label xml:lang="en">Software Agent</rdfs:label>
     </owl:Class>
     
@@ -2641,7 +2656,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ssn/Property"/>
-        <dct:description>An observable quality (property, characteristic) of a feature of interest.</dct:description>
+        <dc:description>An observable quality (property, characteristic) of a feature of interest.</dc:description>
         <rdfs:comment>The height of a tree, the depth of a water body, or the temperature of a surface are examples of observable properties, while the value of a classic car is not (directly) observable but asserted.</rdfs:comment>
         <rdfs:label>Observable Property</rdfs:label>
     </owl:Class>
@@ -2677,7 +2692,7 @@ condition.</dct:description>
                 <owl:onClass rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:description>Act of carrying out an (Observation) procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.</dct:description>
+        <dc:description>Act of carrying out an (Observation) procedure to estimate or calculate a value of a property of a FeatureOfInterest. Links to a Sensor to describe what made the Observation and how; links to an ObservableProperty to describe what the result is an estimate of, and to a FeatureOfInterest to detail what that property was associated with.</dc:description>
         <rdfs:label>Observation</rdfs:label>
     </owl:Class>
     
@@ -2700,7 +2715,7 @@ condition.</dct:description>
                 <owl:onClass rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:description>The result of an activity, process or sensor observation.</dct:description>
+        <dc:description>The result of an activity, process or sensor observation.</dc:description>
         <rdfs:comment>The value 20 as the height of a certain tree together with the unit, e.g., Meter.</rdfs:comment>
         <rdfs:label>Result</rdfs:label>
     </owl:Class>
@@ -2723,7 +2738,7 @@ condition.</dct:description>
                 <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
             </owl:Restriction>
         </rdfs:subClassOf>
-        <dct:description>Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.</dct:description>
+        <dc:description>Device, agent (including humans), or software (simulation) involved in, or implementing, a Procedure. Sensors respond to a Stimulus, e.g., a change in the environment, or Input data composed from the Results of prior Observations, and generate a Result. Sensors can be hosted by Platforms.</dc:description>
         <rdfs:comment>Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smart phone (which acts as Platform).</rdfs:comment>
         <rdfs:label>Sensor</rdfs:label>
     </owl:Class>
@@ -2733,7 +2748,7 @@ condition.</dct:description>
     <!-- http://www.w3.org/ns/ssn/Property -->
 
     <owl:Class rdf:about="http://www.w3.org/ns/ssn/Property">
-        <dct:description>A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</dct:description>
+        <dc:description>A quality of an entity. An aspect of an entity that is intrinsic to and cannot exist without the entity.</dc:description>
         <rdfs:label>Property</rdfs:label>
     </owl:Class>
     
@@ -2743,7 +2758,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="https://mmisw.org/ont/univmemphis/sensor/Temperature">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <dct:description>A temperature sensor.</dct:description>
+        <dc:description>A temperature sensor.</dc:description>
         <rdfs:label>Temperature Sensor</rdfs:label>
     </owl:Class>
     
@@ -2753,7 +2768,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="https://mmisw.org/ont/univmemphis/sensor/_Pressure">
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
-        <dct:description>A sensor that detect pressure.</dct:description>
+        <dc:description>A sensor that detect pressure.</dc:description>
         <rdfs:label>Pressure Sensor</rdfs:label>
     </owl:Class>
     
@@ -2762,7 +2777,7 @@ condition.</dct:description>
     <!-- https://qudt.org/2.1/vocab/unit -->
 
     <owl:Class rdf:about="https://qudt.org/2.1/vocab/unit">
-        <rdfs:label>Represents types of measurement units.</rdfs:label>
+        <dc:description>Represents types of measurement units.</dc:description>
         <rdfs:label>Unit</rdfs:label>
     </owl:Class>
     
@@ -2772,7 +2787,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="https://qudt.org/2.1/vocab/unit/DEG_C">
         <rdfs:subClassOf rdf:resource="https://qudt.org/2.1/vocab/unit"/>
-        <dct:description xml:lang="en">Celsius, also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty.</dct:description>
+        <dc:description xml:lang="en">Celsius, also known as centigrade, is a scale and unit of measurement for temperature. It can refer to a specific temperature on the Celsius scale as well as a unit to indicate a temperature interval, a difference between two temperatures or an uncertainty.</dc:description>
         <rdfs:label xml:lang="en">Degree Celsius</rdfs:label>
     </owl:Class>
     
@@ -2782,7 +2797,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="https://qudt.org/2.1/vocab/unit/DEG_C-PER-HR">
         <rdfs:subClassOf rdf:resource="https://qudt.org/2.1/vocab/unit"/>
-        <dct:description xml:lang="en">Degree Celsius per Hour} is a unit for &apos;Temperature Per Time&apos;.</dct:description>
+        <dc:description xml:lang="en">Degree Celsius per Hour} is a unit for &apos;Temperature Per Time&apos;.</dc:description>
         <rdfs:label xml:lang="en">Degree Celsius per Hour</rdfs:label>
     </owl:Class>
     
@@ -2792,7 +2807,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="https://qudt.org/2.1/vocab/unit/GigaBYTE">
         <rdfs:subClassOf rdf:resource="https://qudt.org/2.1/vocab/unit"/>
-        <dct:description>The gigabyte is a multiple of the unit byte for digital information storage. The prefix giga means 10 in the International System of Units (SI), therefore 1 gigabyte is 1,000,000,000 bytes).</dct:description>
+        <dc:description>The gigabyte is a multiple of the unit byte for digital information storage. The prefix giga means 10 in the International System of Units (SI), therefore 1 gigabyte is 1,000,000,000 bytes).</dc:description>
         <rdfs:label xml:lang="en">Giga Byte</rdfs:label>
     </owl:Class>
     
@@ -2802,7 +2817,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="https://qudt.org/2.1/vocab/unit/GigaHZ">
         <rdfs:subClassOf rdf:resource="https://qudt.org/2.1/vocab/unit"/>
-        <dct:description>The hertz (symbol Hz) is the SI unit of frequency defined as the number of cycles per second of a periodic phenomenon.</dct:description>
+        <dc:description>The hertz (symbol Hz) is the SI unit of frequency defined as the number of cycles per second of a periodic phenomenon.</dc:description>
         <rdfs:label xml:lang="en">Giga Herz</rdfs:label>
     </owl:Class>
     
@@ -2812,7 +2827,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="https://qudt.org/2.1/vocab/unit/KilloGM">
         <rdfs:subClassOf rdf:resource="https://qudt.org/2.1/vocab/unit"/>
-        <dct:description>The kilogram or kilogramme (SI symbol: kg), also known as the kilo, is the base unit of mass in the International System of Units and is defined as being equal to the mass of the International Prototype Kilogram (IPK), which is almost exactly equal to the mass of one liter of water. The avoirdupois (or international) pound, used in both the Imperial system and U.S. customary units, is defined as exactly 0.45359237 kg, making one kilogram approximately equal to 2.2046 avoirdupois pounds.</dct:description>
+        <dc:description>The kilogram or kilogramme (SI symbol: kg), also known as the kilo, is the base unit of mass in the International System of Units and is defined as being equal to the mass of the International Prototype Kilogram (IPK), which is almost exactly equal to the mass of one liter of water. The avoirdupois (or international) pound, used in both the Imperial system and U.S. customary units, is defined as exactly 0.45359237 kg, making one kilogram approximately equal to 2.2046 avoirdupois pounds.</dc:description>
         <rdfs:label xml:lang="en">Killogram</rdfs:label>
     </owl:Class>
     
@@ -2822,7 +2837,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="https://qudt.org/2.1/vocab/unit/KilloW-HR">
         <rdfs:subClassOf rdf:resource="https://qudt.org/2.1/vocab/unit"/>
-        <dct:description>The kilowatt hour, or kilowatt-hour, (kW \hr, or kWh) is a unit of energy equal to 1000 watt hours or 3.6 megajoules. For constant power, energy in watt hours is the product of power in watts and time in hours. The kilowatt hour is most commonly known as a billing unit for energy delivered to consumers by electric utilities.</dct:description>
+        <dc:description>The kilowatt hour, or kilowatt-hour, (kW \hr, or kWh) is a unit of energy equal to 1000 watt hours or 3.6 megajoules. For constant power, energy in watt hours is the product of power in watts and time in hours. The kilowatt hour is most commonly known as a billing unit for energy delivered to consumers by electric utilities.</dc:description>
         <rdfs:label xml:lang="en">Killo Watt per Hour</rdfs:label>
     </owl:Class>
     
@@ -2832,7 +2847,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="https://qudt.org/2.1/vocab/unit/MegaBYTE">
         <rdfs:subClassOf rdf:resource="https://qudt.org/2.1/vocab/unit"/>
-        <dct:description>The megabyte is defined here as one million Bytes.</dct:description>
+        <dc:description>A megabyte is defined here as one million Bytes.</dc:description>
         <rdfs:label xml:lang="en">Mega Byte</rdfs:label>
     </owl:Class>
     
@@ -2842,7 +2857,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="https://qudt.org/2.1/vocab/unit/MegaHZ">
         <rdfs:subClassOf rdf:resource="https://qudt.org/2.1/vocab/unit"/>
-        <dct:description>&quot;Megahertz&quot; is a C.G.S System unit for  &apos;Frequency&apos; expressed as MHz.</dct:description>
+        <dc:description>Megahertz is a C.G.S System unit for  &apos;Frequency&apos; expressed as MHz.</dc:description>
         <rdfs:label xml:lang="en">Mega Herz</rdfs:label>
     </owl:Class>
     
@@ -2852,7 +2867,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="https://qudt.org/2.1/vocab/unit/TeraBYTE">
         <rdfs:subClassOf rdf:resource="https://qudt.org/2.1/vocab/unit"/>
-        <dct:description>The terabyte is a multiple of the unit byte for digital information. The prefix tera means 10^12 in the International System of Units (SI), and therefore 1 terabyte is 1000000000000 bytes, or 1 trillion bytes, or 1000 gigabytes.</dct:description>
+        <dc:description>The terabyte is a multiple of the unit byte for digital information. The prefix tera means 10^12 in the International System of Units (SI), and therefore 1 terabyte is 1000000000000 bytes, or 1 trillion bytes, or 1000 gigabytes.</dc:description>
         <rdfs:label xml:lang="en">Tera Byte</rdfs:label>
     </owl:Class>
     
@@ -2861,7 +2876,7 @@ condition.</dct:description>
     <!-- https://schema.org/Brand -->
 
     <owl:Class rdf:about="https://schema.org/Brand">
-        <dct:description xml:lang="en">A brand is a name used by an organization or business person for labeling a product, product group, or similar.</dct:description>
+        <dc:description xml:lang="en">A brand is a name used by an organization or business person for labeling a product, product group, or similar.</dc:description>
         <rdfs:label xml:lang="en">Brand</rdfs:label>
     </owl:Class>
     
@@ -2871,7 +2886,7 @@ condition.</dct:description>
 
     <owl:Class rdf:about="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country">
         <rdfs:subClassOf rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Location"/>
-        <dct:description>A geopolitical entity representing a country or dependent territory.</dct:description>
+        <dc:description>A geopolitical entity representing a country or dependent territory.</dc:description>
         <rdfs:label>Country</rdfs:label>
     </owl:Class>
     
@@ -2880,7 +2895,7 @@ condition.</dct:description>
     <!-- https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Location -->
 
     <owl:Class rdf:about="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Location">
-        <dct:description>A place or position in time and/or space, including virtual place.</dct:description>
+        <dc:description>A place or position in time and/or space, including virtual place.</dc:description>
         <rdfs:label>Location</rdfs:label>
     </owl:Class>
     
@@ -2896,15 +2911,14 @@ condition.</dct:description>
 
     <rdf:Description rdf:about="http://www.semanticweb.org/RePlanIT/City">
         <rdfs:label>City</rdfs:label>
-        <dct:description>An inhabited place of greater size, population, or importance than a town or village.</dct:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/RePlanIT/CoolingRate">
         <rdfs:label>Cooling Rate</rdfs:label>
-        <dct:description>The amount of energy needed for cooling an ICT device.</dct:description>
+        <dc:description>The amount of energy needed for cooling an ICT device.</dc:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/RePlanIT/EnergyConsumption">
-        <dct:description>Energy consumption refers to the energy usedby a device in operation, which may be an average of different modes of operation (measured in kW).</dct:description>
         <rdfs:label xml:lang="en">Energy Consumption</rdfs:label>
+        <dc:description>Energy consumption refers to the energy usedby a device in operation, which may be an average of different modes of operation (measured in kW).</dc:description>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
         <rdfs:label>top object property</rdfs:label>
