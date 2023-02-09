@@ -25,13 +25,12 @@
      xmlns:ontosensor="http://mmisw.org/ont/univmemphis/sensor#"
      xmlns:devops-infra="http://w3id.org/devops-infra/server#">
     <owl:Ontology rdf:about="http://www.semanticweb.org/RePlanIT/">
-        <dcmitype:contributor>The RePlanIT project consortium.</dcmitype:contributor>
-        <dcmitype:contributor>This work is supported by the Circular Resource Planning for IT (RePlanIT) project, which is funded by a Topsector Energy subsidy from the Ministry of Economic Affairs and Climate Policy in the Netherlands.</dcmitype:contributor>
+        <dc:contributor>Alessandro Bozzon</dc:contributor>
+        <dc:contributor>Ruud Balkenende</dc:contributor>
         <dct:abstract>The increasing digitisation and unprecedented amount of data that is generated on a daily basis has resulted in Information and Communications Technology (ICT) devices being disposed of before the end of their functional lifetime. The result is increased ICT hardware manufacturing, which is not sustainable due to the growing demand for critical materials needed and the greenhouse emissions associated with it. A solution is to transition towards a circular economy (CE), which encourages the reuse, recycling, remanufacturing, and repurposing of materials and products. However, the technological adoption of the CE in the ICT sector is currently limited due to the the lack of standardised and findable, accessible, interoperable, reusable (FAIR) ICT data sharing between manufacturers, sustainability experts and technology provides. This paper presents the initial efforts towards an ontology, which interrelates and synchronises data sharing in the materials, ICT and CE domains. The ontology&apos;s main application is for building dynamic digital product passports of ICT devices that support FAIR ICT data sharing and sustainable human and machine decision-making.</dct:abstract>
         <dct:creator>Anelia Kurteva</dct:creator>
         <dct:license>https://creativecommons.org/licenses/by/4.0/</dct:license>
         <dct:title>The RePlanIT ontology for ICT and materials data sharing in the circular economy</dct:title>
-        <versionInfo>$Date: 2023/02/01 14:43:12 $</versionInfo>
     </owl:Ontology>
     
 
@@ -44,12 +43,6 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
-
-
-    <!-- http://purl.org/dc/dcmitype/contributor -->
-
-    <owl:AnnotationProperty rdf:about="http://purl.org/dc/dcmitype/contributor"/>
     
 
 
@@ -125,7 +118,6 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/Activity"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/CircularStrategy"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/RePlanIT/City"/>
     </owl:ObjectProperty>
     
 
@@ -672,8 +664,9 @@
     <!-- http://www.semanticweb.org/RePlanIT/City -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/City">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/City"/>
+        <rdfs:domain rdf:resource="https://schema.org/City"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <rdfs:label>City</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1195,14 +1188,6 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/CircularStrategy">
         <dc:description xml:lang="en">A range of efficiency and productivity enhancing activities carried out within the Circular Economy (CE).</dc:description>
         <rdfs:label xml:lang="en">Circular Strategy</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://www.semanticweb.org/RePlanIT/City -->
-
-    <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/City">
-        <rdfs:subClassOf rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Location"/>
     </owl:Class>
     
 
@@ -1932,7 +1917,7 @@ Nickel is used in many recognizable industrial and consumer products, including 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/NonFerrous">
         <rdfs:subClassOf rdf:resource="http://matonto.org/ontologies/matonto#Metals"/>
         <dc:description>Non-ferrous metals do not contain iron.</dc:description>
-        <rdfs:label>Non-Ferrous</rdfs:label>
+        <rdfs:label>Non Ferrous</rdfs:label>
     </owl:Class>
     
 
@@ -2882,6 +2867,16 @@ condition.</dc:description>
     
 
 
+    <!-- https://schema.org/City -->
+
+    <owl:Class rdf:about="https://schema.org/City">
+        <rdfs:subClassOf rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Location"/>
+        <dc:description>An inhabited place of greater size, population, or importance than a town or village.</dc:description>
+        <rdfs:label>City</rdfs:label>
+    </owl:Class>
+    
+
+
     <!-- https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country -->
 
     <owl:Class rdf:about="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country">
@@ -2909,9 +2904,6 @@ condition.</dc:description>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/RePlanIT/City">
-        <rdfs:label>City</rdfs:label>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/RePlanIT/CoolingRate">
         <rdfs:label>Cooling Rate</rdfs:label>
         <dc:description>The amount of energy needed for cooling an ICT device.</dc:description>
