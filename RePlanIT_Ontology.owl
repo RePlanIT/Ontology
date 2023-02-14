@@ -401,6 +401,16 @@
     
 
 
+    <!-- http://www.semanticweb.org/RePlanIT/hasVMHost -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/RePlanIT/hasVMHost">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/DataServer"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/RePlanIT/VMHost"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/RePlanIT/hasWarranty -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/RePlanIT/hasWarranty">
@@ -437,6 +447,16 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/RePlanIT/Peripheral"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/isReasonfor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/RePlanIT/isReasonfor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/Reason"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/RePlanIT/CircularStrategy"/>
     </owl:ObjectProperty>
     
 
@@ -478,6 +498,16 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/Status"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/RePlanIT/CircularStrategy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/relatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/RePlanIT/relatedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/Failure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
     </owl:ObjectProperty>
     
 
@@ -636,6 +666,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Agent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Identifier of an agent.</dc:description>
         <rdfs:label>Agent ID</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -646,7 +677,27 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/AssemblyNumber">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/ICTDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>A unique number used to identify a device and/or its hardware components.</dc:description>
         <rdfs:label>Assembly Number</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/BatteryCapacity -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/BatteryCapacity">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C49839"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:label>Battery Capacity</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/CPULoad -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/CPULoad">
+        <dc:description>CPU load is the number of processes that are using, or want to use, CPU time, or queued up processes ready to use CPU.</dc:description>
+        <rdfs:label>CPU Load</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -656,7 +707,29 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/CPUSpeed">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/DeviceSpeed"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <dc:description>CPU speed is determined by how many calculations the processor can perform per cycle.</dc:description>
         <rdfs:label>CPU Speed</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/CameraPixels -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/CameraPixels">
+        <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/NCIT_C49858"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <rdfs:label>Camera Pixels</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/CircularActivityCost -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/CircularActivityCost">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/CircularStrategy"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>The monetary cost of performing repair, recycling, refurbishment, remanufacturing etc. of an ICT and/or its hardware (in euros).</dc:description>
+        <rdfs:label>Circular Activity Cost</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -666,16 +739,19 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/City">
         <rdfs:domain rdf:resource="https://schema.org/City"/>
         <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <dc:description>A city is a human settlement of notable size.</dc:description>
         <rdfs:label>City</rdfs:label>
     </owl:DatatypeProperty>
     
 
 
-    <!-- http://www.semanticweb.org/RePlanIT/CoolingRate -->
+    <!-- http://www.semanticweb.org/RePlanIT/ClockRate -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/CoolingRate">
-        <rdfs:domain rdf:resource="https://qudt.org/2.1/vocab/unit"/>
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/ClockRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/GraphicsCard"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <dc:description>Clock rate of a graphics card in GHz.</dc:description>
+        <rdfs:label>Clock Rate</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -685,6 +761,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/Country">
         <rdfs:domain rdf:resource="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/Country"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>A political state or nation or its territory.</dc:description>
         <rdfs:label>Country</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -705,6 +782,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/DigitalProductPassportID">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/DigitalProductPassport"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>A unique identifier of a digital product passport.</dc:description>
         <rdfs:label>Digital Product Passport ID</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -715,6 +793,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/DisplayResolution">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/Display"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Display resolution or screen resolution expresses how many pixels are present in a display or entire screen.</dc:description>
         <rdfs:label>Display Resolution</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -723,7 +802,8 @@
     <!-- http://www.semanticweb.org/RePlanIT/EnergyConsumption -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/EnergyConsumption">
-        <rdfs:domain rdf:resource="https://qudt.org/2.1/vocab/unit/KilloW-HR"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/ICTDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
     </owl:DatatypeProperty>
     
@@ -732,8 +812,9 @@
     <!-- http://www.semanticweb.org/RePlanIT/HardwareComponentSerialNumber -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/HardwareComponentSerialNumber">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/EnergyConsumption"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>An identification number showing the position of a printed or manufactured item in a series.</dc:description>
         <rdfs:label>Hardware Component Serial Number</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -744,6 +825,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/HardwareComponentWeight">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Weight of a hardware component.</dc:description>
         <rdfs:label>Hardware Component Weight</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -754,6 +836,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/Hardware_Component_Age">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <dc:description>The age of a hardware component measured in months.</dc:description>
         <rdfs:label>Hardware Component Age</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -764,6 +847,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/ICTDeviceAge">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/ICTDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <dc:description>The age of an ICT device since its 1st manufacturing measured in months.</dc:description>
         <rdfs:label>ICT Device Age</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -774,6 +858,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/ICTDeviceSerialNumber">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/ICTDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>An identification number showing the position of a printed or manufactured item in a series.</dc:description>
         <rdfs:label>ICT Device Serial Number</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -784,7 +869,49 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/ICTDeviceWeight">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/ICTDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Weight of an ICT device.</dc:description>
         <rdfs:label>ICT Device Weight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/MaterialWeight -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/MaterialWeight">
+        <dc:description>The weight of a material.</dc:description>
+        <rdfs:label>Material Weight</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/MaxCoolingRate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/MaxCoolingRate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/CoolingSystem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>The speed of an ICT&apos;s cooling system.</dc:description>
+        <rdfs:label>Max Cooling Rate</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/NumberOfPorts -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/NumberOfPorts">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/Port"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:label>Number of Ports</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/NumberOfRAM -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/NumberOfRAM">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/ICTDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Data servers can have several RAM slots.</dc:description>
+        <rdfs:label>Number of RAM</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -793,7 +920,9 @@
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/RAMSize">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/ICTDevice"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/StorageDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <dc:description>The total RAM size of a device or a storage device.</dc:description>
         <rdfs:label>RAM Size</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -804,7 +933,17 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/ROMSize">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/ICTDevice"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <dc:description>ROM is non-volatile memory that permanently stores instructions for your computer.</dc:description>
         <rdfs:label>ROM Size</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/Reason -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/Reason">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/Reason"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
 
@@ -815,6 +954,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/Display"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+        <dc:description>The size of an ICT device&apos;s screen.</dc:description>
         <rdfs:label>Screen Size</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -825,6 +965,7 @@
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/SparePartNumber">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/HardwareComponent"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>Unique number of a spare part usually used for the repair, refurbishment, remanufacturing of an ICT device.</dc:description>
         <rdfs:label>Spare Part Number</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -846,6 +987,27 @@
         <rdfs:domain rdf:resource="https://qudt.org/2.1/vocab/unit/DEG_C-PER-HR"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
         <rdfs:label>Temperature per Hour</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/WarrantyDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/WarrantyDuration">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/Warranty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <dc:description>The duration of warranty.</dc:description>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/YearOfPurchase -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/RePlanIT/YearOfPurchase">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/RePlanIT/ICTDevice"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTimeStamp"/>
+        <dc:description>The year when a device was purchased.</dc:description>
+        <rdfs:label>Year of Purchase</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1462,6 +1624,16 @@ Cadmium is a soft, malleable, ductile, silvery-white divalent metal. It is simil
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Peripheral"/>
         <dc:description>ICT devices and components that go outside the computer case are external peripherals.</dc:description>
         <rdfs:label>External</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/Failure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Failure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Reason"/>
+        <dc:description>A failure of an ICT&apos;s hardware component that leads to applying a circular strategy.</dc:description>
+        <rdfs:label>Failure</rdfs:label>
     </owl:Class>
     
 
@@ -2101,6 +2273,12 @@ Nickel is used in many recognizable industrial and consumer products, including 
     
 
 
+    <!-- http://www.semanticweb.org/RePlanIT/Reason -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Reason"/>
+    
+
+
     <!-- http://www.semanticweb.org/RePlanIT/Recommendation -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/Recommendation">
@@ -2407,6 +2585,16 @@ condition.</dc:description>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/RePlanIT/Laptop"/>
         <dc:description>The term &apos;ultrabook&apos; has been introduced by Intel. A notebook can be considered an ultrabook if it&apos;s no more than 1.5cm thick, has an Intel processor, and an SSD.</dc:description>
         <rdfs:label>Ultrabook</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/RePlanIT/VMHost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/RePlanIT/VMHost">
+        <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Software"/>
+        <dc:description>A virtual machine (VM) host is a virtual machine operated and hosted from a remote cloud server.</dc:description>
+        <rdfs:label>VM Host</rdfs:label>
     </owl:Class>
     
 
@@ -2904,13 +3092,13 @@ condition.</dc:description>
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    <rdf:Description rdf:about="http://www.semanticweb.org/RePlanIT/CoolingRate">
-        <rdfs:label>Cooling Rate</rdfs:label>
-        <dc:description>The amount of energy needed for cooling an ICT device.</dc:description>
-    </rdf:Description>
     <rdf:Description rdf:about="http://www.semanticweb.org/RePlanIT/EnergyConsumption">
         <rdfs:label xml:lang="en">Energy Consumption</rdfs:label>
         <dc:description>Energy consumption refers to the energy usedby a device in operation, which may be an average of different modes of operation (measured in kW).</dc:description>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/RePlanIT/Reason">
+        <dc:description>The reason/precondition for a circular strategy.</dc:description>
+        <rdfs:label>Reason</rdfs:label>
     </rdf:Description>
     <rdf:Description rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
         <rdfs:label>top object property</rdfs:label>
