@@ -4,4 +4,4 @@ The increasing digitisation and unprecedented amount of data that is generated o
 Statistics:
 200 classes, 49 object properties, 22 data properties.
 
-WIDOCO documentation:
+WIDOCO documentation: https://kind.io.tudelft.nl/replanit/docs/ 
