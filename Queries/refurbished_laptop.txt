@@ -1,0 +1,214 @@
+PREFIX : <http://www.semanticweb.org/RePlanIT/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX unit: <https://qudt.org/2.1/vocab/unit/>
+PREFIX om-2:<http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX dpv: <http://www.w3.org/ns/dpv#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+INSERT DATA{{
+       :{ID} a :Laptop;
+              :AssemblyNumber "{AssemblyNumber}"^^xsd:string;
+              :hasBrand :{Brand};
+              :Model "{Model}"^^xsd:string;
+              :ModelYear "{ModelYear}"^^xsd:integer;
+              :hasStatus :{Status};
+              :DeliveryTime "{DeliveryTime}"^^xsd:double;
+              :ICTDeviceWeight "{ICTDeviceWeight}"^^xsd:double;
+              :hasCertification :EPEAT;
+              :hasCertification :SEPA;
+              :hasCertification :TCO;
+              :hasDeclarationType :EnvironmentalProductDeclaration;
+              :DeclarationDate "{DeclarationDate}"^^xsd:dateTime;
+              :PurchaseCostValue "{PurchaseCostValue}"^^xsd:double;
+              :CurrentCostValue "{CurrentCostValue}"^^xsd:double;                          
+              :MaintenanceCycles "{MaintenanceCycled}"^^xsd:double;
+              :hasSupport _:blankNode;
+              :SupportCostValue "{SupportCostValue}"^^xsd:double;
+              :hasOperatingSystem :{OperatingSystem};
+              :hasSecuritySoftware :{SecuritySoftware};
+              :WarrantyDuration "{WarrantyDuration}"^^xsd:double;
+              :Image "{Image}"^^xsd:anyURI;
+              :Temperature ""^^xsd:double;
+              :DisplayResolution "{DisplayResolution}"^^xsd:string;
+              :ScreenSize "{ScreenSize}"^^xsd:double;
+              :hasGraphicsCardProcessor :IntelIrisXGraphics;
+              :ClockRate "{ClockRate}"^^xsd:double;
+              :CameraPixels "{CameraPixels}"^^xsd:double;
+              :hasMemory :{Memory};
+              :hasComponent :SSD;
+              :RAMSize "{RAMSize}"^^xsd:integer;
+              :ROMSize "{ROMSize}"^^xsd:integer;
+              :BatteryCapacity "{BatteryCapacity}"^^xsd:double;
+              :BatteryLifetime "{BatteryLifetime}"^^xsd:double;
+              :BatteryWeight   "{BatteryWeight}"^^xsd:double;                      
+              :hasComponent :{CPU};
+              :hasCPUSeries :{CPUSeries};
+              :CPULoad ""^^xsd:double;
+              :CPUSpeed "{CPUSpeed}"^^xsd:double; 
+              :hasSensor :{Sensor};
+              :CarbonFootprintUse "{CarbonFootprintUse}"^^xsd:double;
+              :CarbonFootprintDistribution "{CarbonFootprintDistribution}"^^xsd:double;
+              :CarbonFootprintErrorRatio "{CarbonFootprintErrorRatio}"^^xsd:double;
+              :CarbonFootprintEoL "{CarbonFootprintEoL}"^^xsd:double;
+              :CarbonFootprintManufacturing "{CarbonFootprintManufacturing}"^^xsd:double;
+              :CarbonFootprint_kg_Use "{CarbonFootprint_kg_Use}"^^xsd:double;
+              :CarbonFootprint_kg_Distribution "{CarbonFootprint_kg_Distribution}"^^xsd:double;
+              :CarbonFootprint_kg_EoL "{CarbonFootprint_kg_EoL}"^^xsd:double;
+              :CarbonFootprint_kg_Manufacturing "{CarbonFootprint_kg_Manufacturing}"^^xsd:double;
+              :CircularActivityCost "{CircularActivityCost}"^^xsd:double;
+              :DeviceCarbonFootprint "{DeviceCarbonFootprint}"^^xsd:double;
+              :DeviceCarbonFootprintErrorRatio "{DeviceCarbonFootprintErrorRatio}"^^xsd:double;
+              :EnergyConsumption "{EnergyConsumption}"^^xsd:double;
+              :EPDAvailability  "true"^^xsd:boolean;
+              :SourceHash "{SourceHash}"^^xsd:string;
+              :EPDSource "{EPDSource}"^^xsd:anyURI; 
+              :EPDDeviceLifetime "{EPDDeviceLifetime}"^^xsd:double;
+              :EPDDeviceWeight "{EPDDeviceWeight}"^^xsd:double;
+              :EPDUseLocation "{EPDUseLocation}"^^xsd:string;
+              :EPDFinalManufacturingLocation "{EPDFinalManufacturingLocation}"^^xsd:string;
+              :EPDUseEnergyDemand "{EPDUseEnergyDemand}"^^xsd:double;
+              :GHGCostProduction "{GHGCostProduction}"^^xsd:double;
+              :GHGCostUse "{GHGCostUse}"^^xsd:double;
+              :CarbonFootprintSource "{CarbonFootprintSource}"^^xsd:anyURI;
+              :ProductSpecificationSource "{ProductSpecificationSource}"^^xsd:anyURI;
+              :MaterialCompositionSource  "{MaterialCompositionSource}"^^xsd:anyURI;                            
+              :MaterialRecyclability ""^^xsd:boolean;
+              :AluminiumWeight "{AluminiumWeight}"^^xsd:double;                         
+              :CopperWeight "{CopperWeight}"^^xsd:double; 
+              :SteelWeight "{SteelWeight}"^^xsd:double;                                       
+              :PlasticWeight "{PlasticWeight}"^^xsd:double;
+              :PCBWeight "{PCBWeight}"^^xsd:double; 
+              :GlassesWeight "{GlassesWeight}"^^xsd:double; 
+              :OtherMaterialsWeight "{OtherMaterialsWeight}"^^xsd:double; 
+              :OtherMetalsWeight "{OtherMetalsWeight}"^^xsd:double;
+              :Waste "{Waste}"^^xsd:double;
+              :RecycledContent  "{RecycledContent}"^^xsd:integer;
+              :AluminiumRecycledContent ""^^xsd:double;
+              :BatteryRecycledContent ""^^xsd:double;
+              :CopperRecycledContent ""^^xsd:double;
+              :SteelRecycledContent ""^^xsd:double;                                                                                                       
+              :PCBRecycledContent ""^^xsd:double;
+              :GlassesRecycledContent ""^^xsd:double;
+              :OtherMetalsRecycledContent ""^^xsd:double;
+              :OtherMaterialsRecycledContent ""^^xsd:double;  
+              :CollectionRateValue "{CollectionRateValue}"^^xsd:double;
+              :EoLRefurbishmentRate "{EoLRefurbishmentRate}"^^xsd:double;
+              :EoLRemanufacturingAluminium "{EoLRemanufacturingAluminium}"^^xsd:double;                  
+              :EoLRemanufacturingCopper "{EoLRemanufacturingCopper}"^^xsd:double;                  
+              :EoLRemanufacturingSteel "{EoLRemanufacturingSteel}"^^xsd:double;                  
+              :EoLRemanufacturingBattery "{EoLRemanufacturingBattery}"^^xsd:double;                  
+              :EoLRemanufacturingPCB "{EoLRemanufacturingPCB}"^^xsd:double;                  
+              :EoLRemanufacturingPlastic "{EoLRemanufacturingPlastic}"^^xsd:double;                  
+              :EoLRemanufacturingGlasses "{EoLRemanufacturingGlasses}"^^xsd:double;                  
+              :EoLRemanufacturingOtherMaterials "{EoLRemanufacturingOtherMaterials}"^^xsd:double;                  
+              :EoLRemanufacturingOtherMetals "{EoLRemanufacturingOtherMetals}"^^xsd:double;
+              :EoLRecycledCLAluminium "{EoLRecycledCLAluminium}"^^xsd:double;
+              :EoLRecycledCLCopper "{EoLRecycledCLCopper}"^^xsd:double;
+              :EoLRecycledCLSteel "{EoLRecycledCLSteel}"^^xsd:double;
+              :EoLRecycledCLBattery "{EoLRecycledCLBattery}"^^xsd:double;
+              :EoLRecycledCLGlasses "{EoLRecycledCLGlasses}"^^xsd:double;
+              :EoLRecycledCLPCB "{EoLRecycledCLPCB}"^^xsd:double;
+              :EoLRecycledCLPlastic "{EoLRecycledCLPlastic}"^^xsd:double;
+              :EoLRecycledCLOtherMetals "{EoLRecycledCLOtherMetals}"^^xsd:double;
+              :EoLRecycledCLOtherMaterials "{EoLRecycledCLOtherMaterials}"^^xsd:double;                        
+              :EoLRecycledOLAluminium "{EoLRecycledOLAluminium}"^^xsd:double;
+              :EoLRecycledOLCopper "{EoLRecycledOLCopper}"^^xsd:double;
+              :EoLRecycledOLSteel "{EoLRecycledOLSteel}"^^xsd:double;
+              :EoLRecycledOLBattery "{EoLRecycledOLBattery}"^^xsd:double;
+              :EoLRecycledOLGlasses "{EoLRecycledOLGlasses}"^^xsd:double;
+              :EoLRecycledOLPCB "{EoLRecycledOLPCB}"^^xsd:double;
+              :EoLRecycledOLPlastic "{EoLRecycledOLPlastic}"^^xsd:double;
+              :EoLRecycledOLOtherMetals "{EoLRecycledOLOtherMetals}"^^xsd:double;
+              :EoLRecycledOLOtherMaterials "{EoLRecycledOLOtherMaterials}"^^xsd:double.
+
+        :Refurbishment :isSelectedCircularStrategyFor :{ID};
+                 :dueToReason :{CircularStrategyReason};
+                 :startDate "{CircularStrategyStartDate}"^^xsd:dateTime;
+                 :endDate "{CircularStrategyEndDate}"^^xsd:dateTime;
+                 :hasStatus :{CircularStrategyStatus}.
+
+       :{AgentID} a prov:Agent;
+              a prov:Organization;
+              dpv:hasRole :{AgentRole};
+              :Email "{AgentEmail}"^^xsd:string;
+              :TelephoneNumber "{AgentTelephoneNumber}"^^xsd:string;
+              :worksFor :{AgentCompany};
+              :isResponsibleFor :{ID}.
+    
+      
+       :09df74ca-7863-430b-95d7-256bf6ex7aca a :HardwareComponent;
+              a :Display;
+              :isComponentOf :{ID};
+              :CarbonFootprintManufacturing "15.80"^^xsd:double.
+    
+       :05df74aa-7863-4c0b-95d7-a56fd6ef3ax3 a :HardwareComponent;
+              a :PCB;
+              :isComponentOf :{ID};
+              :CarbonFootprintManufacturing "39.10"^^xsd:double.
+    
+       :09fs73aa-7863-4c0b-95d7-25abd6ef73cx a :HardwareComponent;
+              a :Cables;  
+              :isComponentOf :{ID};
+              :CarbonFootprintManufacturing "2.10"^^xsd:double.
+    
+       :0f5f74aa-7863-4afb-95d7-256bsfef7cax a :HardwareComponent; 
+              a :Chassis;
+              :isComponentOf :{ID};
+              :CarbonFootprintManufacturing "6.40"^^xsd:double.
+    
+       :502f74aa-7863-4fab-95d7-356bdcescxbb a :HardwareComponent;
+              a obo:NCIT_C49839;
+              :isComponentOf :{ID};
+              :CarbonFootprintManufacturing "3.20"^^xsd:double.
+
+       :092f7aaa-fx63-4s0b-95d7-256bd6efc43b a :HardwareComponent;
+              a :HardDrive;
+              :isComponentOf :{ID};
+              :CarbonFootprintManufacturing "31.30"^^xsd:double.
+
+       :042fc4fa-7x63-4axb-95d7-256bd6es73bc a :HardwareComponent;
+              a :Packaging;
+              :isPackagingFor :{ID};
+              :CarbonFootprintManufacturing "0.30"^^xsd:double.
+
+       :03xf74aa-7363-4s0b-95d7-256ss6effakc a :HardwareComponent;
+              a :OtherHardwareComponent;
+              :isComponentOf :{ID};
+              :CarbonFootprintManufacturing "1.70"^^xsd:double.  
+    
+       :{ID} :hasIndicator :PurchaseCost;
+              :hasIndicator :CurrentCost;
+              :hasIndicator :TrueCost;
+              :hasIndicator :CircularActivityCost;
+              :hasIndicator :DeliveryTime;
+              :hasIndicator :ICTDeviceWeight;
+              :hasIndicator :MaterialWeight;
+              :hasIndicator :ClockRate;
+              :hasIndicator :CameraPixels;
+              :hasIndicator :CPULoad;
+              :hasIndicator :CPUSpeed;
+              :hasIndicator :BatteryCapacity;
+              :hasIndicator :BatteryLifetime;
+              :hasIndicator :BatteryWeight;
+              :hasIndicator :Memory;
+              :hasIndicator :ScreenSize;
+              :hasIndicator :GreenHouseGasCost;
+              :hasIndicator :GreenHouseGasCostProduction;
+              :hasIndicator :CarbonFootprintUse;
+              :hasIndicator :CarbonFootprintDistribution;
+              :hasIndicator :CarbonFootprintEoL;
+              :hasIndicator :CarbonFootprintErrorRatio;
+              :hasIndicator :CarbonFootprintManufacturing;
+              :hasIndicator :WarrantyDuration;
+              :hasIndicator :EnergyConsumption;
+              :hasIndicator :GreenHouseGasEmissions;
+              :hasIndicator :MaterialCircularity;
+              :hasIndicator :UseEnergyDemand;
+              :hasIndicator :Waste;
+              :hasIndicator :CollectionRate;
+              :hasIndicator :EoLRecycledCL;
+              :hasIndicator :EoLRecycledOL;
+              :hasIndicator :EoLRemanufacturing.
+ 
+}}   

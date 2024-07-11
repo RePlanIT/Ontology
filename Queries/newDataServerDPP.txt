@@ -1,0 +1,184 @@
+Valid for RePlanIT_DPP_v2 (GraphDB)
+
+PREFIX : <http://www.semanticweb.org/RePlanIT/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX unit: <https://qudt.org/2.1/vocab/unit/>
+PREFIX om-2:<http://www.ontology-of-units-of-measure.org/resource/om-2/>
+PREFIX dpv: <http://www.w3.org/ns/dpv#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX obo: <http://purl.obolibrary.org/obo/>
+INSERT DATA{
+    :p2a25396-5461-4f6c-a93f-8f5cb7b3554o a :DataServer;
+                                          :AssemblyNumber "pod00bc-53a6-49ee-b38c-c64862c5bc29"^^xsd:string;
+                                          :hasBrand :HP;
+                                          :Model "ProLiant DL360"^^xsd:string;
+                                          :ModelYear "2019"^^xsd:integer;
+                                          :hasStatus :New;
+                                          :DeliveryTime ""^^xsd:double;
+                                          :ICTDeviceWeight "13.04"^^xsd:double;
+                                          :hasCertification :EnergyStar;
+                                          :hasCertification :MicrosoftLogoCertification;
+                                          :hasCertification :EuropeanUnionErpLot9;
+                                          :hasDeclarationType _:blankNode;
+      									  :DeclarationDate ""^^xsd:dateTime;
+                                          :PurchaseCostValue "1.905"^^xsd:double;
+                                          :CurrentCostValue "1.705"^^xsd:double;
+                                          :TrueCostValue  ""^^xsd:double;                         
+                                          :MaintenanceCycles "0"^^xsd:double;
+                                          :hasSupport _:blankNode;
+                                          :SupportCostValue ""^^xsd:double;
+                                          :hasSoftware :HPE_iLO_Standard_Intelligent_Provisioning;
+                                          :hasOperatingSystem :IntelXeon;
+                                          :hasSecuritySoftware :HPClientSecurity;
+                                          :hasSecuritySoftware :IntrusionDetectionKit;
+                                          :hasSecuritySoftware :TripleDataEncryptionStandard;
+                                          :hasSecuritySoftware :AdvancedEncryptionStandard;
+                                          :hasSecuritySoftware :HPETrustedSupplyChain;
+                                          :WarrantyDuration "3"^^xsd:double;
+                                          :WarrantyDetails  "3/3/3 - Server Warranty includes three years of parts, three years of labor, three years of onsite support coverage. Additional information regarding worldwide limited warranty and technical support is available at: http://h20564.www2.hpe.com/hpsc/wc/public/home. Additional HPE support and service coverage for your product can be purchased locally. For information on availability of service upgrades and the cost for these service upgrades, refer to the HPE website at http://www.hpe.com/support"^^xsd:string;                 
+                                          :Image "https://assets.ext.hpe.com/is/image/hpedam/s00001312?$zoom$#.png"^^xsd:anyURI;
+                                                                                                                                                                   :Image "https://assets.ext.hpe.com/is/image/hpedam/s00002841?$zoom$#.png  "^^xsd:anyURI;
+                                          :Temperature ""^^xsd:double;
+                                          :ClockRate ""^^xsd:double;
+                                          :hasComponent :NVDIMM;
+                                          :hasComponent :HPENVDIMMN;
+                                          :NVDIMMRank "Single"^^xsd:string;
+                                          :NVDIMMCapacity "16" ^^xsd:double;
+                                          :MemorySlots "24" ^^xsd:integer; 
+                                          :CPUSpeed   "3.9" ^^xsd:double;                 
+                                          :MinCPUCache "8.25" ^^xsd:integer; 
+                                          :MaxCPUCache "38.50" ^^xsd:integer;
+                                          :ServerGeneration :Gen10;          
+                                          :hasComponent :IntelCore;
+                                          :CPULoad ""^^xsd:double;
+                                          :hasMemory :DDR4; 
+                                          :ExpansionSlotNumber "3" ^^xsd:integer;
+                                          :hasComponent :8SFF;
+                                          :hasComponent :4LFF;
+                          
+                                          :CarbonFootprintUse ""^^xsd:double;
+                                          :CarbonFootprintDistribution ""^^xsd:double;
+                                          :CarbonFootprintErrorratio ""^^xsd:double;
+                                          :CarbonFootprintEoL ""^^xsd:double;
+                                          :CarbonFootprintManufacturing ""^^xsd:double;
+                                          :CarbonFootprint_kg_Use ""^^xsd:double;
+                                          :CarbonFootprint_kg_Distribution ""^^xsd:double;
+                                          :CarbonFootprint_kg_EoL ""^^xsd:double;
+                                          :CarbonFootprint_kg_Manufacturing ""^^xsd:double;
+                                          :CircularActivityCost "200"^^xsd:double;
+                                          :DeviceCarbonFootprint ""^^xsd:double;
+                                          :DeviceCarbonFootprintErrorRatio ""^^xsd:double;
+                                          :EnergyConsumption ""^^xsd:double;
+                                          :EPDAvailability  "false"^^xsd:boolean;
+                                          :SourceHash ""^^xsd:string;
+                                          :EPDSource ""^^xsd:anyURI; 
+                                          :EPDDeviceLifetime ""^^xsd:double;
+                                          :EPDDeviceWeight ""^^xsd:double;
+                                          :EPDUseLocation ""^^xsd:string;
+                                          :EPDFinalManufacturingLocation ""^^xsd:string;
+                                          :EPDUseEnergyDemand ""^^xsd:double;
+                                          :GHGCostProduction ""^^xsd:double;
+                                          :GHGCostUse ""^^xsd:double;
+                                          :CarbonFootprintSource ""^^xsd:anyURI;
+                                          :ProductSpecificationSource ""^^xsd:anyURI; 
+                                          :ProductSpecificationSource "https://buy.hpe.com/nl/en/compute/rack-servers/proliant-dl300-servers/proliant-dl360-server/hpe-proliant-dl360-gen10-server/p/1010007891 "^^xsd:anyURI;
+                                          :MaterialCompositionSource  ""^^xsd:anyURI;                            
+                                          :MaterialRecyclability ""^^xsd:boolean;
+                                           
+                                          :AluminiumWeight ""^^xsd:double;                         
+    									  :CopperWeight ""^^xsd:double; 
+    									  :SteelWeight ""^^xsd:double;                                       
+    									  :PlasticWeight ""^^xsd:double;
+                                          :PCBWeight ""^^xsd:double; 
+                                          :GlassesWeight ""^^xsd:double; 
+                                          :OtherMaterialsWeight ""^^xsd:double; 
+                                          :OtherMetalsWeight ""^^xsd:double;
+                                          :Waste ""^^xsd:double;
+                                          :RecycledContent  ""^^xsd:integer;
+                                          :AluminiumRecycledContent ""^^xsd:double;
+                                          :BatteryRecycledContent ""^^xsd:double;
+                                          :CopperRecycledContent ""^^xsd:double;
+                                          :SteelRecycledContent ""^^xsd:double;                                                              						:PCBRecycledContent ""^^xsd:double;
+										  :GlassesRecycledContent ""^^xsd:double;
+										  :OtherMetalsRecycledContent ""^^xsd:double;
+										  :OtherMaterialsRecycledContent ""^^xsd:double;
+										  
+                                          :CollectionRateValue ""^^xsd:double;
+                                		  :EoLRefurbishmentRate ""^^xsd:double;
+                                          
+                                          :EoLRemanufacturingAluminium ""^^xsd:double;                  
+                                          :EoLRemanufacturingCopper ""^^xsd:double;                  
+                                          :EoLRemanufacturingSteel ""^^xsd:double;                  
+                       					  :EoLRemanufacturingBattery ""^^xsd:double;                  
+                                          :EoLRemanufacturingPCB ""^^xsd:double;                  
+                                          :EoLRemanufacturingPlastic ""^^xsd:double;                  
+                                          :EoLRemanufacturingGlasses ""^^xsd:double;                  
+                                          :EoLRemanufacturingOtherMaterials ""^^xsd:double;                  
+                                          :EoLRemanufacturingOtherMetals ""^^xsd:double;
+                                          
+                                          :EoLRecycledCLAluminium ""^^xsd:double;
+                                          :EoLRecycledCLCopper ""^^xsd:double;
+                                          :EoLRecycledCLSteel ""^^xsd:double;
+                                          :EoLRecycledCLBattery ""^^xsd:double;
+                                          :EoLRecycledCLGlasses ""^^xsd:double;
+                                          :EoLRecycledCLPCB ""^^xsd:double;
+                                          :EoLRecycledCLPlastic ""^^xsd:double;
+                                          :EoLRecycledCLOtherMetals ""^^xsd:double;
+                                          :EoLRecycledCLOtherMaterials ""^^xsd:double;
+										
+                                          :EoLRecycledOLAluminium ""^^xsd:double;
+                                          :EoLRecycledOLCopper ""^^xsd:double;
+                                          :EoLRecycledOLSteel ""^^xsd:double;
+                                          :EoLRecycledOLBattery ""^^xsd:double;
+                                          :EoLRecycledOLGlasses ""^^xsd:double;
+                                          :EoLRecycledOLPCB ""^^xsd:double;
+                                          :EoLRecycledOLPlastic ""^^xsd:double;
+                                          :EoLRecycledOLOtherMetals ""^^xsd:double;
+                                          :EoLRecycledOLOtherMaterials ""^^xsd:double.
+
+
+
+
+       :c762119e-58a4-4e46-8e4a-880cc8aas18a a prov:Agent;
+                                             a prov:Organization;
+                                             dpv:hasRole :Refurbisher;
+                                             dpv:hasRole :Manufacturere;
+                                             :Email "john.doe@gmail.com"^^xsd:string;
+                                             :TelephoneNumber "0337329020932"^^xsd:string;
+                                             :worksFor :HP;
+                                             :isResponsibleFor :p2a25396-5461-4f6c-a93f-8f5cb7b3554o.
+                                                              
+      
+   :p2a25396-5461-4f6c-a93f-8f5cb7b3554o :hasIndicator :PurchaseCost;
+    									  :hasIndicator :CurrentCost;
+    									  :hasIndicator :TrueCost;
+    									  :hasIndicator :Circular_Activity_Cost;
+    									  :hasIndicator :Delivery_Time;
+    									  :hasIndicator :ICT_Device_Weight;
+    									  :hasIndicator :MaterialWeight;
+    									  :hasIndicator :Clock_Rate;
+    									  :hasIndicator :CPU_Load;
+    									  :hasIndicator :CPU_Speed;
+    									  :hasIndicator :Memory;
+    									  :hasIndicator :GreenHouseGasCost;
+    									  :hasIndicator :GreenHouseGasCostProduction;
+               							  :hasIndicator :CarbonFootprintUse;
+                        				  :hasIndicator :CarbonFootprintDistribution;
+                        				  :hasIndicator :CarbonFootprintEoL;
+                        				  :hasIndicator :CarbonFootprintErrorRatio;
+                              			  :hasIndicator :CarbonFootprintManufacturing;
+    									  :hasIndicator :Warranty_Duration;
+    									  :hasIndicator :Energy_Consumption;
+    									  :hasIndicator :GreenHouseGasEmissions;
+       									  :hasIndicator :MaterialCircularity;
+       									  :hasIndicator :UseEnergyDemand;
+       									  :hasIndicator :Waste;
+            							  :hasIndicator :CollectionRate;
+             							  :hasIndicator :EoLRecycledCL;
+            							  :hasIndicator :EoLRecycledOL;
+           								  :hasIndicator :EoLRemanufacturing.
+    
+
+}   
+    
